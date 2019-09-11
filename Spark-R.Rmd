@@ -1,0 +1,274 @@
+---
+title: "Spark with R"
+author: "Nitesh Turaga"
+date: "8/31/2019"
+output: html_document
+---
+
+# Getting started
+
+## Install packages
+
+Expects Spark and Java 8 to be installed. Otherwise expect erros when
+starting with Java 12.1 as Spark is NOT compatible.
+
+To install Java 8,
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html .
+
+Once you install Java 8, make sure the new Java path is configured.
+
+```{bash}
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+```
+
+And to make sure R can see the new path, run, 
+
+```{bash}
+R CMD javareconf
+```
+
+This should then let you use R.
+
+Good reference: https://medium.com/luckspark/installing-spark-2-3-0-on-macos-high-sierra-276a127b8b85
+
+## Starting sparklyR
+
+```{r setup, eval=FALSE}
+BiocManager::install(c('sparklyr', 'SparkR'))
+sparklyr::spark_install(version = "2.1.0")
+```
+
+Open connection, and create a "spark"
+
+```{r}
+library(sparklyr)
+sc <- spark_connect(master = "local")
+```
+
+## Do something with it,
+
+Get some test data,
+
+```{r}
+BiocManager::install(c("nycflights13", "Lahman"))
+```
+
+Then send data to spark cluster as tibbles,
+
+```{r}
+library(dplyr)
+iris_tbl <- copy_to(sc, iris)
+flights_tbl <- copy_to(sc, nycflights13::flights, "flights")
+batting_tbl <- copy_to(sc, Lahman::Batting, "batting")
+src_tbls(sc)
+```
+
+# Main Notes
+
+- Error messages aren't as clear as they could be. 
+
+- sparklyr provides a dplyr interface to spark
+
+- PySpark and Spark-Scala are more mature than SparkR. Right now there
+  are some things you just cannot do with Spark in R.
+
+## Workflow
+
+Overall spark workflow: 
+
+1. Connect to spark_connect()
+
+2. Do work
+
+3. Disconnect using spark_disconnect()
+
+dplyr -> grammar of data tranformations -> works with spark data
+frames, this is the main advantage of sparklyr. (Verbs remain more or
+less the same)
+
+- select()
+
+- filter()
+
+- arrange()
+
+- mutate()
+
+- summarize()
+
+## Some useful commands
+
+```{r}
+sc <- spark_connect(master="local")
+spark_version(sc = sc)
+spark_disconnect(sc = sc)
+```
+
+`spark_connect()`: takes a URL that gives the location to Spark. For a
+local cluster (as the one running), the URL should be "local". For a
+remote cluster (on another machine, typically a high-performance
+server), the connection string will be a URL and port to connect
+on - (Need to figure this one out)
+
+## Copying data into spark
+
+NOTE: To do work on spark, data needs to be in the spark cluster.
+
+`spark_read_csv()` read a csv file
+
+`copy_to(dest = spark_connection, df)`: Copy to a spark connection a
+data frame, this is a dplyr function. **Returns a tibble**
+
+`src_tbls(spark_connection)` :list tables in spark connection
+
+## Working with data
+
+`tbl(spark_conn, "data")`: returns the tibble spark object.
+
+```{r}
+class(track_metadata_tbl)
+[1] "tbl_spark" "tbl_sql"   "tbl_lazy"  "tbl"
+```
+
+`dim(track_metadata_tbl)` : get dimensions
+
+`pryr::object_size(track_metadata_tbl)` : get object size of spark-tibble
+
+
+## Explore data
+
+`print(tbl, n=5, width=Inf)`
+
+`str(tbl)`
+
+`glimpse(tbl)`
+
+## data maniputation
+
+- Note: Only dplyr and magrittr syntax allowed
+
+```{r}
+## Works
+track_metadata_tbl %>% select(release, year)
+
+## Does not work
+track_metadata_tbl[, c("release", "year")]
+```
+
+- sparklyr converts dplyr code into SQL database code before passing
+it to Spark. No regular expressions allowed in non-dplyr helpers
+`filter(grepl("a regex", x))`
+
+- dplyr's helper functions work with sparklyr,
+  `select(starts_with("blah"))`, `select(ends_with("blah"))`,
+  `select(contains())`, `select(matches(regex))` works.
+
+- 
+
+## compute and collect
+
+count(colname, sort=TRUE)
+
+top_n(10): like head()
+
+
+
+# Cloud Dataproc
+
+- Cloud Dataproc is a managed Apache Spark and Apache Hadoop service
+  that lets you take advantage of open source data tools for batch
+  processing, querying, streaming, and machine learning.
+
+- Cloud Dataproc automation helps you create clusters quickly, manage
+  them easily, and save money by turning clusters off when you don't
+  need them.
+
+
+```{sh}
+## Create a cluster
+## default is a cluster of 3 nodes, 1 master, 2 workers
+
+gcloud dataproc clusters create example-cluster
+
+## Update cluster with
+
+gcloud dataproc clusters update example-cluster --num-workers 5
+
+## submit a job
+
+gcloud dataproc jobs submit spark --cluster example-cluster \
+	--class org.apache.spark.examples.SparkPi \
+	--jars file:///usr/lib/spark/examples/jars/spark-examples.jar -- 1000
+
+## Cleanup cluster and bucket associated with it
+gcloud dataproc clusters delete example-cluster
+
+gsutil rm gs://bucket/subdir/**
+
+
+## bucket is automatically attached to each data proc cluster
+gsutil ls
+#gs://dataproc-c479ab8c-867f-4bfe-943d-b7df40d440b6-us/
+
+```
+
+result of job submission:
+
+```{sh}
+Job [c9a941d9dc11458c94cc6ae7d31f9034] submitted.
+Waiting for job output...
+19/09/11 14:29:17 INFO org.spark_project.jetty.util.log: Logging initialized @2834ms
+19/09/11 14:29:17 INFO org.spark_project.jetty.server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/09/11 14:29:17 INFO org.spark_project.jetty.server.Server: Started @2953ms
+19/09/11 14:29:17 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@1f1cae23{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+19/09/11 14:29:17 WARN org.apache.spark.scheduler.FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/09/11 14:29:18 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at example-cluster-m/10.142.0.4:8032
+19/09/11 14:29:18 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at example-cluster-m/10.142.0.4:10200
+19/09/11 14:29:21 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1568211955596_0001
+Pi is roughly 3.1415060314150605
+19/09/11 14:29:41 INFO org.spark_project.jetty.server.AbstractConnector: Stopped Spark@1f1cae23{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Job [c9a941d9dc11458c94cc6ae7d31f9034] finished successfully.
+driverControlFilesUri: gs://dataproc-c479ab8c-867f-4bfe-943d-b7df40d440b6-us/google-cloud-dataproc-metainfo/557469ae-d29c-4ca2-ac4e-d0b6d0a8ca32/jobs/c9a941d9dc11458c94cc6ae7d31f9034/
+driverOutputResourceUri: gs://dataproc-c479ab8c-867f-4bfe-943d-b7df40d440b6-us/google-cloud-dataproc-metainfo/557469ae-d29c-4ca2-ac4e-d0b6d0a8ca32/jobs/c9a941d9dc11458c94cc6ae7d31f9034/driveroutput
+jobUuid: 8023aeee-7136-32d6-a2f8-6a185c3a16b9
+placement:
+  clusterName: example-cluster
+  clusterUuid: 557469ae-d29c-4ca2-ac4e-d0b6d0a8ca32
+reference:
+  jobId: c9a941d9dc11458c94cc6ae7d31f9034
+  projectId: container-project-241916
+sparkJob:
+  args:
+  - '1000'
+  jarFileUris:
+  - file:///usr/lib/spark/examples/jars/spark-examples.jar
+  mainClass: org.apache.spark.examples.SparkPi
+status:
+  state: DONE
+  stateStartTime: '2019-09-11T14:29:46.354Z'
+statusHistory:
+- state: PENDING
+  stateStartTime: '2019-09-11T14:29:11.638Z'
+- state: SETUP_DONE
+  stateStartTime: '2019-09-11T14:29:12.088Z'
+- details: Agent reported job success
+  state: RUNNING
+  stateStartTime: '2019-09-11T14:29:12.613Z'
+yarnApplications:
+- name: Spark Pi
+  progress: 1.0
+  state: FINISHED
+  trackingUrl: http://example-cluster-m:8088/proxy/application_1568211955596_0001/
+```
+
+
+## Start a jupyter notebook with dataproc
+
+```{sh}
+gcloud beta dataproc clusters create cluster-name \
+    --optional-components=ANACONDA,JUPYTER \
+    --image-version=1.3 \
+    --enable-component-gateway \
+    --bucket bucket-name \
+    --project project-id
+```
