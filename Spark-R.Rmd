@@ -127,7 +127,7 @@ data frame, this is a dplyr function. **Returns a tibble**
 
 ```{r}
 class(track_metadata_tbl)
-[1] "tbl_spark" "tbl_sql"   "tbl_lazy"  "tbl"
+# [1] "tbl_spark" "tbl_sql"   "tbl_lazy"  "tbl"
 ```
 
 `dim(track_metadata_tbl)` : get dimensions
@@ -167,12 +167,38 @@ it to Spark. No regular expressions allowed in non-dplyr helpers
 
 ## compute and collect
 
-count(colname, sort=TRUE)
+`count(colname, sort=TRUE)` : count
 
-top_n(10): like head()
+`top_n(10)`: like head()
+
+`collect()` : returns data frame where as print returns tbl_spark
 
 
+**NOTE**: Copying data to and from Spark to R is a fundamentally slow task! This should only be one when we really need to do it.
 
+`compute()`:  to compute the calculation, but store the results in a temporary data frame on Spark
+
+
+## Workflow 2 - distributed R
+
+```{r}
+library(sparklyr)
+sc <- spark_connect(master = "local")
+
+res <- sdf_len(sc, 5, repartition = 1) %>% spark_apply(function(e) I(e))
+
+class(res) ## tbl_spark
+
+res
+```
+
+More infor about spark_apply: https://spark.rstudio.com/guides/distributed-r/
+
+
+## PACKAGE INSTALLATION
+
+Since packages are copied only once for the duration of the spark_connect() connection, installing additional packages is not supported while the connection is active. Therefore, if a new package needs to be installed, spark_disconnect() the connection, modify packages and reconnect.
+  
 # Cloud Dataproc
 
 - Cloud Dataproc is a managed Apache Spark and Apache Hadoop service
