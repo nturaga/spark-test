@@ -99,9 +99,9 @@ less the same)
 ## Some useful commands
 
 ```{r}
-sc <- spark_connect(master="local")
-spark_version(sc = sc)
-spark_disconnect(sc = sc)
+sc <- spark_connect(master="local") ## bpstart
+spark_version(sc = sc) ## bplapply
+spark_disconnect(sc = sc) ## bpstop
 ```
 
 `spark_connect()`: takes a URL that gives the location to Spark. For a
@@ -197,8 +197,42 @@ More infor about spark_apply: https://spark.rstudio.com/guides/distributed-r/
 
 ## PACKAGE INSTALLATION
 
-Since packages are copied only once for the duration of the spark_connect() connection, installing additional packages is not supported while the connection is active. Therefore, if a new package needs to be installed, spark_disconnect() the connection, modify packages and reconnect.
-  
+Since packages are copied only once for the duration of the
+spark_connect() connection, installing additional packages is not
+supported while the connection is active. Therefore, if a new package
+needs to be installed, spark_disconnect() the connection, modify
+packages and reconnect.
+
+
+## Write SQL directly to make quieries possible outside of sparklyR
+
+Use `DBI` package to get results as `data.frame`.
+
+```{r}
+query <- "SELECT col1, col2 FROM some_data WHERE some_condition"
+
+## Get query results immediately 
+result_dataframe <- DBI::dbGetQuery(spark_connection, query)
+
+## Send and fetch later,
+dbiresult <- dbSendQuery(spark_connection, query)
+res <- dbFetch(dbiresult, n=Inf) ## Fetch all records
+```
+
+## Other interfaces to Spark
+
+### Machine learning interface (MLlib)
+
+* Feature transformation `ft_`
+
+* Machine learning functions `ml_`
+
+* Spark DataFrame API `sdf_` - sort, sample and partition datasets
+
+### Feature transformation
+
+
+
 # Cloud Dataproc
 
 - Cloud Dataproc is a managed Apache Spark and Apache Hadoop service
