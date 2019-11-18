@@ -1,0 +1,2906 @@
+2019-09-05 10:07:30 Hail: WARN: This Hail JAR was compiled for Spark 2.4.0, running with Spark 2.4.1.
+  Compatibility is not guaranteed.
+2019-09-05 10:07:30 SparkContext: INFO: Running Spark version 2.4.1
+2019-09-05 10:07:30 SparkContext: INFO: Submitted application: Hail
+2019-09-05 10:07:30 SparkContext: INFO: Spark configuration:
+spark.app.name=Hail
+spark.driver.extraClassPath=/Users/ni41435_lca/miniconda3/envs/hail/lib/python3.6/site-packages/hail/hail-all-spark.jar
+spark.executor.extraClassPath=./hail-all-spark.jar
+spark.hadoop.io.compression.codecs=org.apache.hadoop.io.compress.DefaultCodec,is.hail.io.compress.BGzipCodec,is.hail.io.compress.BGzipCodecTbi,org.apache.hadoop.io.compress.GzipCodec
+spark.hadoop.mapreduce.input.fileinputformat.split.minsize=0
+spark.jars=file:///Users/ni41435_lca/miniconda3/envs/hail/lib/python3.6/site-packages/hail/hail-all-spark.jar
+spark.kryo.registrator=is.hail.kryo.HailKryoRegistrator
+spark.logConf=true
+spark.master=local[*]
+spark.repl.local.jars=file:///Users/ni41435_lca/miniconda3/envs/hail/lib/python3.6/site-packages/hail/hail-all-spark.jar
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.ui.showConsoleProgress=false
+2019-09-05 10:07:30 SecurityManager: INFO: Changing view acls to: ni41435_lca
+2019-09-05 10:07:30 SecurityManager: INFO: Changing modify acls to: ni41435_lca
+2019-09-05 10:07:30 SecurityManager: INFO: Changing view acls groups to: 
+2019-09-05 10:07:30 SecurityManager: INFO: Changing modify acls groups to: 
+2019-09-05 10:07:30 SecurityManager: INFO: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ni41435_lca); groups with view permissions: Set(); users  with modify permissions: Set(ni41435_lca); groups with modify permissions: Set()
+2019-09-05 10:07:30 Utils: INFO: Successfully started service 'sparkDriver' on port 59517.
+2019-09-05 10:07:30 SparkEnv: INFO: Registering MapOutputTracker
+2019-09-05 10:07:30 SparkEnv: INFO: Registering BlockManagerMaster
+2019-09-05 10:07:30 BlockManagerMasterEndpoint: INFO: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-09-05 10:07:30 BlockManagerMasterEndpoint: INFO: BlockManagerMasterEndpoint up
+2019-09-05 10:07:30 DiskBlockManager: INFO: Created local directory at /private/var/folders/6d/6dsfg6190rs6qm2fvbyml920smsq5s/T/blockmgr-cb784c0a-48de-4652-a42a-9df448ec6219
+2019-09-05 10:07:30 MemoryStore: INFO: MemoryStore started with capacity 366.3 MB
+2019-09-05 10:07:30 SparkEnv: INFO: Registering OutputCommitCoordinator
+2019-09-05 10:07:31 log: INFO: Logging initialized @3972ms
+2019-09-05 10:07:31 Server: INFO: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-09-05 10:07:31 Server: INFO: Started @4079ms
+2019-09-05 10:07:31 AbstractConnector: INFO: Started ServerConnector@18913ff6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-09-05 10:07:31 Utils: INFO: Successfully started service 'SparkUI' on port 4040.
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2c00ac58{/jobs,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@9b6cc2d{/jobs/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5ff0b037{/jobs/job,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6209a7ce{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5de1c806{/stages,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@7caaa85{/stages/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@49284c4e{/stages/stage,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@678eeae5{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6c4f9066{/stages/pool,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@fb7b3b8{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2dd54224{/storage,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@3d1c4cb9{/storage/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2d4037dc{/storage/rdd,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1fd86bbf{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@181bde02{/environment,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@473d303c{/environment/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6bef01d0{/executors,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@37360a81{/executors/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@719b39ab{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5f094b74{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@4c7b30c4{/static,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@640c0e6a{/,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@4d91d15c{/api,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5122abef{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@23d33ef8{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 SparkUI: INFO: Bound SparkUI to 0.0.0.0, and started at http://c02st34lgvc8.roswellpark.org:4040
+2019-09-05 10:07:31 SparkContext: INFO: Added JAR file:///Users/ni41435_lca/miniconda3/envs/hail/lib/python3.6/site-packages/hail/hail-all-spark.jar at spark://c02st34lgvc8.roswellpark.org:59517/jars/hail-all-spark.jar with timestamp 1567692451308
+2019-09-05 10:07:31 Executor: INFO: Starting executor ID driver on host localhost
+2019-09-05 10:07:31 Utils: INFO: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59518.
+2019-09-05 10:07:31 NettyBlockTransferService: INFO: Server created on c02st34lgvc8.roswellpark.org:59518
+2019-09-05 10:07:31 BlockManager: INFO: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-09-05 10:07:31 BlockManagerMaster: INFO: Registering BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-05 10:07:31 BlockManagerMasterEndpoint: INFO: Registering block manager c02st34lgvc8.roswellpark.org:59518 with 366.3 MB RAM, BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-05 10:07:31 BlockManagerMaster: INFO: Registered BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-05 10:07:31 BlockManager: INFO: Initialized BlockManager: BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-05 10:07:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@555cbda4{/metrics/json,null,AVAILABLE,@Spark}
+2019-09-05 10:07:31 Hail: INFO: Hail temporary directory: file:/tmp/hail.y9sji7K7raCc
+2019-09-05 10:07:31 Hail: INFO: SparkUI: http://c02st34lgvc8.roswellpark.org:4040
+2019-09-05 10:07:31 Hail: INFO: Running Hail version 0.2.20-dd6c996e7db5
+2019-09-05 10:07:32 MemoryStore: INFO: Block broadcast_0 stored as values in memory (estimated size 33.5 KB, free 366.3 MB)
+2019-09-05 10:07:32 MemoryStore: INFO: Block broadcast_0_piece0 stored as bytes in memory (estimated size 2.9 KB, free 366.3 MB)
+2019-09-05 10:07:32 BlockManagerInfo: INFO: Added broadcast_0_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 2.9 KB, free: 366.3 MB)
+2019-09-05 10:07:32 SparkContext: INFO: Created broadcast 0 from broadcast at SparkBackend.scala:26
+2019-09-05 10:07:33 MemoryStore: INFO: Block broadcast_1 stored as values in memory (estimated size 1643.2 KB, free 364.7 MB)
+2019-09-05 10:07:33 MemoryStore: INFO: Block broadcast_1_piece0 stored as bytes in memory (estimated size 108.4 KB, free 364.6 MB)
+2019-09-05 10:07:33 BlockManagerInfo: INFO: Added broadcast_1_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 108.4 KB, free: 366.2 MB)
+2019-09-05 10:07:33 SparkContext: INFO: Created broadcast 1 from broadcast at SparkBackend.scala:26
+2019-09-05 10:07:33 MemoryStore: INFO: Block broadcast_2 stored as values in memory (estimated size 8.7 KB, free 364.5 MB)
+2019-09-05 10:07:33 MemoryStore: INFO: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1000.0 B, free 364.5 MB)
+2019-09-05 10:07:33 BlockManagerInfo: INFO: Added broadcast_2_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 1000.0 B, free: 366.2 MB)
+2019-09-05 10:07:33 SparkContext: INFO: Created broadcast 2 from broadcast at SparkBackend.scala:26
+2019-09-05 10:07:33 SparkContext: WARN: Using an existing SparkContext; some configuration may not take effect.
+2019-09-05 10:07:33 Hail: INFO: downloading MovieLens-100k data ...
+  Source: http://files.grouplens.org/datasets/movielens/ml-100k.zip
+2019-09-05 10:07:37 Hail: INFO: importing users table and writing to data/users.ht ...
+2019-09-05 10:07:37 MemoryStore: INFO: Block broadcast_3 stored as values in memory (estimated size 237.3 KB, free 364.3 MB)
+2019-09-05 10:07:37 MemoryStore: INFO: Block broadcast_3_piece0 stored as bytes in memory (estimated size 23.0 KB, free 364.3 MB)
+2019-09-05 10:07:37 BlockManagerInfo: INFO: Added broadcast_3_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.2 MB)
+2019-09-05 10:07:37 SparkContext: INFO: Created broadcast 3 from textFile at RichSparkContext.scala:16
+2019-09-05 10:07:37 FileInputFormat: INFO: Total input paths to process : 1
+2019-09-05 10:07:37 Hail: INFO: Reading table to impute column types
+2019-09-05 10:07:37 SparkContext: INFO: Starting job: reduce at TextTableReader.scala:193
+2019-09-05 10:07:38 DAGScheduler: INFO: Got job 0 (reduce at TextTableReader.scala:193) with 4 output partitions
+2019-09-05 10:07:38 DAGScheduler: INFO: Final stage: ResultStage 0 (reduce at TextTableReader.scala:193)
+2019-09-05 10:07:38 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:38 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:38 DAGScheduler: INFO: Submitting ResultStage 0 (MapPartitionsRDD[4] at mapPartitions at TextTableReader.scala:166), which has no missing parents
+2019-09-05 10:07:38 MemoryStore: INFO: Block broadcast_4 stored as values in memory (estimated size 6.0 KB, free 364.3 MB)
+2019-09-05 10:07:38 MemoryStore: INFO: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.2 KB, free 364.3 MB)
+2019-09-05 10:07:38 BlockManagerInfo: INFO: Added broadcast_4_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 3.2 KB, free: 366.2 MB)
+2019-09-05 10:07:38 SparkContext: INFO: Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:38 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at mapPartitions at TextTableReader.scala:166) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:38 TaskSchedulerImpl: INFO: Adding task set 0.0 with 4 tasks
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 Executor: INFO: Running task 3.0 in stage 0.0 (TID 3)
+2019-09-05 10:07:38 Executor: INFO: Running task 2.0 in stage 0.0 (TID 2)
+2019-09-05 10:07:38 Executor: INFO: Running task 1.0 in stage 0.0 (TID 1)
+2019-09-05 10:07:38 Executor: INFO: Running task 0.0 in stage 0.0 (TID 0)
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:16971+5657
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:0+5657
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:11314+5657
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:5657+5657
+2019-09-05 10:07:38 Executor: INFO: Finished task 3.0 in stage 0.0 (TID 3). 853 bytes result sent to driver
+2019-09-05 10:07:38 Executor: INFO: Finished task 0.0 in stage 0.0 (TID 0). 810 bytes result sent to driver
+2019-09-05 10:07:38 Executor: INFO: Finished task 2.0 in stage 0.0 (TID 2). 853 bytes result sent to driver
+2019-09-05 10:07:38 Executor: INFO: Finished task 1.0 in stage 0.0 (TID 1). 853 bytes result sent to driver
+2019-09-05 10:07:38 TaskSetManager: INFO: Finished task 3.0 in stage 0.0 (TID 3) in 166 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:38 TaskSetManager: INFO: Finished task 2.0 in stage 0.0 (TID 2) in 267 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:38 TaskSetManager: INFO: Finished task 1.0 in stage 0.0 (TID 1) in 269 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:38 TaskSetManager: INFO: Finished task 0.0 in stage 0.0 (TID 0) in 301 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:38 TaskSchedulerImpl: INFO: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:38 DAGScheduler: INFO: ResultStage 0 (reduce at TextTableReader.scala:193) finished in 0.407 s
+2019-09-05 10:07:38 DAGScheduler: INFO: Job 0 finished: reduce at TextTableReader.scala:193, took 0.476667 s
+2019-09-05 10:07:38 Hail: INFO: Finished type imputation
+  Loading column 'f0' as type 'int32' (imputed)
+  Loading column 'f1' as type 'int32' (imputed)
+  Loading column 'f2' as type 'str' (imputed)
+  Loading column 'f3' as type 'str' (imputed)
+  Loading column 'f4' as type 'str' (imputed)
+2019-09-05 10:07:38 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 4: 
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/users.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableRename ("f1" "f0" "f3" "f4" "f2") ("age" "id" "occupation" "zipcode" "sex") () ()
+    (TableKeyBy (f0) False
+      (TableRead None False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}"))))
+2019-09-05 10:07:38 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 4:
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/users.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableKeyBy (id) False
+    (TableRename ("f1" "f0" "f3" "f4" "f2") ("age" "id" "occupation" "zipcode" "sex") () ()
+      (TableRead None False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}"))))
+2019-09-05 10:07:38 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 4: 
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/users.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableKeyBy (id) False
+    (TableRename ("f1" "f0" "f3" "f4" "f2") ("age" "id" "occupation" "zipcode" "sex") () ()
+      (TableRead None False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}"))))
+2019-09-05 10:07:38 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 4:
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/users.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableKeyBy (id) False
+    (TableRename ("f1" "f0" "f3" "f4" "f2") ("age" "id" "occupation" "zipcode" "sex") () ()
+      (TableRead None False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}"))))
+2019-09-05 10:07:38 MemoryStore: INFO: Block broadcast_5 stored as values in memory (estimated size 237.4 KB, free 364.0 MB)
+2019-09-05 10:07:38 MemoryStore: INFO: Block broadcast_5_piece0 stored as bytes in memory (estimated size 23.0 KB, free 364.0 MB)
+2019-09-05 10:07:38 BlockManagerInfo: INFO: Added broadcast_5_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:38 SparkContext: INFO: Created broadcast 5 from textFile at RichSparkContext.scala:16
+2019-09-05 10:07:38 FileInputFormat: INFO: Total input paths to process : 1
+2019-09-05 10:07:38 SparkContext: INFO: Starting job: collect at ContextRDD.scala:222
+2019-09-05 10:07:38 DAGScheduler: INFO: Got job 1 (collect at ContextRDD.scala:222) with 4 output partitions
+2019-09-05 10:07:38 DAGScheduler: INFO: Final stage: ResultStage 1 (collect at ContextRDD.scala:222)
+2019-09-05 10:07:38 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:38 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:38 DAGScheduler: INFO: Submitting ResultStage 1 (MapPartitionsRDD[14] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:07:38 MemoryStore: INFO: Block broadcast_6 stored as values in memory (estimated size 15.4 KB, free 364.0 MB)
+2019-09-05 10:07:38 MemoryStore: INFO: Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.5 KB, free 364.0 MB)
+2019-09-05 10:07:38 BlockManagerInfo: INFO: Added broadcast_6_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 7.5 KB, free: 366.1 MB)
+2019-09-05 10:07:38 SparkContext: INFO: Created broadcast 6 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:38 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[14] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:38 TaskSchedulerImpl: INFO: Adding task set 1.0 with 4 tasks
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 0.0 in stage 1.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 1.0 in stage 1.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 2.0 in stage 1.0 (TID 6, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 TaskSetManager: INFO: Starting task 3.0 in stage 1.0 (TID 7, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:38 Executor: INFO: Running task 1.0 in stage 1.0 (TID 5)
+2019-09-05 10:07:38 Executor: INFO: Running task 3.0 in stage 1.0 (TID 7)
+2019-09-05 10:07:38 Executor: INFO: Running task 0.0 in stage 1.0 (TID 4)
+2019-09-05 10:07:38 Executor: INFO: Running task 2.0 in stage 1.0 (TID 6)
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:0+5657
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:5657+5657
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:11314+5657
+2019-09-05 10:07:38 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:16971+5657
+2019-09-05 10:07:39 Executor: INFO: Finished task 0.0 in stage 1.0 (TID 4). 1041 bytes result sent to driver
+2019-09-05 10:07:39 Executor: INFO: Finished task 3.0 in stage 1.0 (TID 7). 1048 bytes result sent to driver
+2019-09-05 10:07:39 Executor: INFO: Finished task 2.0 in stage 1.0 (TID 6). 1048 bytes result sent to driver
+2019-09-05 10:07:39 Executor: INFO: Finished task 1.0 in stage 1.0 (TID 5). 1048 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 1.0 in stage 1.0 (TID 5) in 107 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 0.0 in stage 1.0 (TID 4) in 108 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 3.0 in stage 1.0 (TID 7) in 107 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 2.0 in stage 1.0 (TID 6) in 108 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:39 TaskSchedulerImpl: INFO: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:39 DAGScheduler: INFO: ResultStage 1 (collect at ContextRDD.scala:222) finished in 0.120 s
+2019-09-05 10:07:39 DAGScheduler: INFO: Job 1 finished: collect at ContextRDD.scala:222, took 0.124719 s
+2019-09-05 10:07:39 Hail: INFO: Coerced sorted dataset
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C0.<init> instruction count: 3
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C0.apply instruction count: 11
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C0.apply instruction count: 13
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C1.<init> instruction count: 3
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C1.apply instruction count: 16
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C1.apply instruction count: 13
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C1.method1 instruction count: 100
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C1.method2 instruction count: 83
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C2.<init> instruction count: 3
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C2.apply instruction count: 16
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C2.apply instruction count: 13
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C2.method1 instruction count: 85
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C2.method2 instruction count: 113
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C3.<init> instruction count: 3
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C3.apply instruction count: 16
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C3.apply instruction count: 13
+2019-09-05 10:07:39 root: INFO: is/hail/codegen/generated/C3.method1 instruction count: 161
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_7 stored as values in memory (estimated size 237.4 KB, free 363.8 MB)
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_7_piece0 stored as bytes in memory (estimated size 23.0 KB, free 363.8 MB)
+2019-09-05 10:07:39 BlockManagerInfo: INFO: Added broadcast_7_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:39 SparkContext: INFO: Created broadcast 7 from broadcast at HailContext.scala:621
+2019-09-05 10:07:39 SparkContext: INFO: Starting job: collect at ContextRDD.scala:222
+2019-09-05 10:07:39 DAGScheduler: INFO: Got job 2 (collect at ContextRDD.scala:222) with 4 output partitions
+2019-09-05 10:07:39 DAGScheduler: INFO: Final stage: ResultStage 2 (collect at ContextRDD.scala:222)
+2019-09-05 10:07:39 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:39 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:39 DAGScheduler: INFO: Submitting ResultStage 2 (MapPartitionsRDD[16] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_8 stored as values in memory (estimated size 21.9 KB, free 363.7 MB)
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_8_piece0 stored as bytes in memory (estimated size 10.3 KB, free 363.7 MB)
+2019-09-05 10:07:39 BlockManagerInfo: INFO: Added broadcast_8_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 10.3 KB, free: 366.1 MB)
+2019-09-05 10:07:39 SparkContext: INFO: Created broadcast 8 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:39 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 2 (MapPartitionsRDD[16] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:39 TaskSchedulerImpl: INFO: Adding task set 2.0 with 4 tasks
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 0.0 in stage 2.0 (TID 8, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 1.0 in stage 2.0 (TID 9, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 2.0 in stage 2.0 (TID 10, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 3.0 in stage 2.0 (TID 11, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 Executor: INFO: Running task 0.0 in stage 2.0 (TID 8)
+2019-09-05 10:07:39 Executor: INFO: Running task 1.0 in stage 2.0 (TID 9)
+2019-09-05 10:07:39 Executor: INFO: Running task 3.0 in stage 2.0 (TID 11)
+2019-09-05 10:07:39 Executor: INFO: Running task 2.0 in stage 2.0 (TID 10)
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:16971+5657
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:0+5657
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:11314+5657
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/ug2eNZlVJX.txt:5657+5657
+2019-09-05 10:07:39 Executor: INFO: Finished task 0.0 in stage 2.0 (TID 8). 896 bytes result sent to driver
+2019-09-05 10:07:39 Executor: INFO: Finished task 3.0 in stage 2.0 (TID 11). 896 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 0.0 in stage 2.0 (TID 8) in 238 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 3.0 in stage 2.0 (TID 11) in 237 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:39 Executor: INFO: Finished task 1.0 in stage 2.0 (TID 9). 896 bytes result sent to driver
+2019-09-05 10:07:39 Executor: INFO: Finished task 2.0 in stage 2.0 (TID 10). 896 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 1.0 in stage 2.0 (TID 9) in 245 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 2.0 in stage 2.0 (TID 10) in 245 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:39 TaskSchedulerImpl: INFO: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:39 DAGScheduler: INFO: ResultStage 2 (collect at ContextRDD.scala:222) finished in 0.261 s
+2019-09-05 10:07:39 DAGScheduler: INFO: Job 2 finished: collect at ContextRDD.scala:222, took 0.264807 s
+2019-09-05 10:07:39 Hail: INFO: wrote table with 943 rows in 4 partitions to data/users.ht
+2019-09-05 10:07:39 root: INFO: Time taken for CompileAndEvaluate -- first pass: 77.512ms
+2019-09-05 10:07:39 root: INFO: Time taken for CompileAndEvaluate -- after Matrix lowering: 3.195ms
+2019-09-05 10:07:39 root: INFO: Time taken for CompileAndEvaluate -- interpret: 1.072s
+2019-09-05 10:07:39 Hail: INFO: importing movies table and writing to data/movies.ht ...
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_9 stored as values in memory (estimated size 237.4 KB, free 363.5 MB)
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_9_piece0 stored as bytes in memory (estimated size 23.0 KB, free 363.5 MB)
+2019-09-05 10:07:39 BlockManagerInfo: INFO: Added broadcast_9_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:39 SparkContext: INFO: Created broadcast 9 from textFile at RichSparkContext.scala:16
+2019-09-05 10:07:39 FileInputFormat: INFO: Total input paths to process : 1
+2019-09-05 10:07:39 Hail: INFO: Reading table to impute column types
+2019-09-05 10:07:39 SparkContext: INFO: Starting job: reduce at TextTableReader.scala:193
+2019-09-05 10:07:39 DAGScheduler: INFO: Got job 3 (reduce at TextTableReader.scala:193) with 4 output partitions
+2019-09-05 10:07:39 DAGScheduler: INFO: Final stage: ResultStage 3 (reduce at TextTableReader.scala:193)
+2019-09-05 10:07:39 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:39 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:39 DAGScheduler: INFO: Submitting ResultStage 3 (MapPartitionsRDD[21] at mapPartitions at TextTableReader.scala:166), which has no missing parents
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_10 stored as values in memory (estimated size 6.1 KB, free 363.5 MB)
+2019-09-05 10:07:39 MemoryStore: INFO: Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.3 KB, free 363.5 MB)
+2019-09-05 10:07:39 BlockManagerInfo: INFO: Added broadcast_10_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 3.3 KB, free: 366.1 MB)
+2019-09-05 10:07:39 SparkContext: INFO: Created broadcast 10 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:39 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 3 (MapPartitionsRDD[21] at mapPartitions at TextTableReader.scala:166) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:39 TaskSchedulerImpl: INFO: Adding task set 3.0 with 4 tasks
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 0.0 in stage 3.0 (TID 12, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 1.0 in stage 3.0 (TID 13, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 2.0 in stage 3.0 (TID 14, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 TaskSetManager: INFO: Starting task 3.0 in stage 3.0 (TID 15, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:39 Executor: INFO: Running task 0.0 in stage 3.0 (TID 12)
+2019-09-05 10:07:39 Executor: INFO: Running task 1.0 in stage 3.0 (TID 13)
+2019-09-05 10:07:39 Executor: INFO: Running task 3.0 in stage 3.0 (TID 15)
+2019-09-05 10:07:39 Executor: INFO: Running task 2.0 in stage 3.0 (TID 14)
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:0+59086
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:118172+59086
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:177258+59086
+2019-09-05 10:07:39 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:59086+59086
+2019-09-05 10:07:39 Executor: INFO: Finished task 0.0 in stage 3.0 (TID 12). 905 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 0.0 in stage 3.0 (TID 12) in 45 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:39 Executor: INFO: Finished task 2.0 in stage 3.0 (TID 14). 948 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 2.0 in stage 3.0 (TID 14) in 51 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:39 Executor: INFO: Finished task 1.0 in stage 3.0 (TID 13). 948 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 1.0 in stage 3.0 (TID 13) in 53 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:39 Executor: INFO: Finished task 3.0 in stage 3.0 (TID 15). 905 bytes result sent to driver
+2019-09-05 10:07:39 TaskSetManager: INFO: Finished task 3.0 in stage 3.0 (TID 15) in 56 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:39 TaskSchedulerImpl: INFO: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:39 DAGScheduler: INFO: ResultStage 3 (reduce at TextTableReader.scala:193) finished in 0.067 s
+2019-09-05 10:07:39 DAGScheduler: INFO: Job 3 finished: reduce at TextTableReader.scala:193, took 0.070184 s
+2019-09-05 10:07:39 Hail: INFO: Finished type imputation
+  Loading column 'f0' as type 'int32' (imputed)
+  Loading column 'f1' as type 'str' (imputed)
+  Loading column 'f2' as type 'str' (imputed)
+  Loading column 'f3' as type 'str' (imputed)
+  Loading column 'f4' as type 'str' (imputed)
+  Loading column 'f5' as type 'int32' (imputed)
+  Loading column 'f6' as type 'int32' (imputed)
+  Loading column 'f7' as type 'int32' (imputed)
+  Loading column 'f8' as type 'int32' (imputed)
+  Loading column 'f9' as type 'int32' (imputed)
+  Loading column 'f10' as type 'int32' (imputed)
+  Loading column 'f11' as type 'int32' (imputed)
+  Loading column 'f12' as type 'int32' (imputed)
+  Loading column 'f13' as type 'int32' (imputed)
+  Loading column 'f14' as type 'int32' (imputed)
+  Loading column 'f15' as type 'int32' (imputed)
+  Loading column 'f16' as type 'int32' (imputed)
+  Loading column 'f17' as type 'int32' (imputed)
+  Loading column 'f18' as type 'int32' (imputed)
+  Loading column 'f19' as type 'int32' (imputed)
+  Loading column 'f20' as type 'int32' (imputed)
+  Loading column 'f21' as type 'int32' (imputed)
+  Loading column 'f22' as type 'int32' (imputed)
+  Loading column 'f23' as type 'int32' (imputed)
+2019-09-05 10:07:40 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 142: 
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/movies.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableMapRows
+    (TableMapRows
+      (TableRename ("f20" "f19" "f7" "f6" "f14" "f1" "f13" "f18" "f8" "f10" "f0" "f5" "f21" "f3" "f9" "f17" "f4" "f11" "f22" "f15" "f16" "f23" "f2" "f12") ("Sci-Fi" "Romance" "Adventure" "Action" "Fantasy" "title" "Drama" "Mystery" "Animation" "Comedy" "id" "unknown" "Thriller" "video release date" "Children's" "Musical" "IMDb URL" "Crime" "War" "Film-Noir" "Horror" "Western" "release date" "Documentary") () ()
+        (TableKeyBy (f0) False
+          (TableRead None False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+      (SelectFields (id title Action Adventure Animation `Children's` Comedy Crime Documentary Drama Fantasy `Film-Noir` Horror Musical Mystery Romance `Sci-Fi` Thriller War Western)
+        (SelectFields (id title `release date` `video release date` `IMDb URL` unknown Action Adventure Animation `Children's` Comedy Crime Documentary Drama Fantasy `Film-Noir` Horror Musical Mystery Romance `Sci-Fi` Thriller War Western)
+          (Ref row))))
+    (SelectFields (id title genres)
+      (InsertFields
+        (SelectFields (id title Action Adventure Animation `Children's` Comedy Crime Documentary Drama Fantasy `Film-Noir` Horror Musical Mystery Romance `Sci-Fi` Thriller War Western)
+          (Ref row))
+        None
+        (genres
+          (ArrayFlatMap __uid_4
+            (MakeArray Array[Array[String]]
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Action
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Adventure
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Animation
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField `Children's`
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Comedy
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Crime
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Documentary
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Drama
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Fantasy
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField `Film-Noir`
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Horror
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Musical
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Mystery
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Romance
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField `Sci-Fi`
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Thriller
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField War
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String]))
+              (If
+                (ApplyComparisonOp NEQ
+                  (GetField Western
+                    (Ref row))
+                  (I32 0))
+                (Literal Array[String] <literal value>)
+                (MakeArray Array[String])))
+            (Ref __uid_4)))))))
+2019-09-05 10:07:40 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 137:
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/movies.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableMapRows
+    (TableKeyBy (id) False
+      (TableRename ("f20" "f19" "f7" "f6" "f14" "f1" "f13" "f18" "f8" "f10" "f0" "f21" "f9" "f17" "f11" "f22" "f15" "f16" "f23" "f12") ("Sci-Fi" "Romance" "Adventure" "Action" "Fantasy" "title" "Drama" "Mystery" "Animation" "Comedy" "id" "Thriller" "Children's" "Musical" "Crime" "War" "Film-Noir" "Horror" "Western" "Documentary") () ()
+        (TableRead Table{global:Struct{},key:[],row:Struct{f0:Int32,f1:String,f6:Int32,f7:Int32,f8:Int32,f9:Int32,f10:Int32,f11:Int32,f12:Int32,f13:Int32,f14:Int32,f15:Int32,f16:Int32,f17:Int32,f18:Int32,f19:Int32,f20:Int32,f21:Int32,f22:Int32,f23:Int32}} False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+    (InsertFields
+      (SelectFields (id title)
+        (Ref row))
+      ("id" "title" "genres")
+      (genres
+        (ArrayFlatMap __iruid_4
+          (MakeArray Array[Array[String]]
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Action
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Adventure
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Animation
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Children's`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Comedy
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Crime
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Documentary
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Drama
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Fantasy
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Film-Noir`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Horror
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Musical
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Mystery
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Romance
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Sci-Fi`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Thriller
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField War
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Western
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>)))
+          (Ref __iruid_4))))))
+2019-09-05 10:07:40 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 137: 
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/movies.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableMapRows
+    (TableKeyBy (id) False
+      (TableRename ("f20" "f19" "f7" "f6" "f14" "f1" "f13" "f18" "f8" "f10" "f0" "f21" "f9" "f17" "f11" "f22" "f15" "f16" "f23" "f12") ("Sci-Fi" "Romance" "Adventure" "Action" "Fantasy" "title" "Drama" "Mystery" "Animation" "Comedy" "id" "Thriller" "Children's" "Musical" "Crime" "War" "Film-Noir" "Horror" "Western" "Documentary") () ()
+        (TableRead Table{global:Struct{},key:[],row:Struct{f0:Int32,f1:String,f6:Int32,f7:Int32,f8:Int32,f9:Int32,f10:Int32,f11:Int32,f12:Int32,f13:Int32,f14:Int32,f15:Int32,f16:Int32,f17:Int32,f18:Int32,f19:Int32,f20:Int32,f21:Int32,f22:Int32,f23:Int32}} False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+    (InsertFields
+      (SelectFields (id title)
+        (Ref row))
+      ("id" "title" "genres")
+      (genres
+        (ArrayFlatMap __iruid_4
+          (MakeArray Array[Array[String]]
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Action
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Adventure
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Animation
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Children's`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Comedy
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Crime
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Documentary
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Drama
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Fantasy
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Film-Noir`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Horror
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Musical
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Mystery
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Romance
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Sci-Fi`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Thriller
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField War
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Western
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>)))
+          (Ref __iruid_4))))))
+2019-09-05 10:07:40 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 137:
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/movies.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableMapRows
+    (TableKeyBy (id) False
+      (TableRename ("f20" "f19" "f7" "f6" "f14" "f1" "f13" "f18" "f8" "f10" "f0" "f21" "f9" "f17" "f11" "f22" "f15" "f16" "f23" "f12") ("Sci-Fi" "Romance" "Adventure" "Action" "Fantasy" "title" "Drama" "Mystery" "Animation" "Comedy" "id" "Thriller" "Children's" "Musical" "Crime" "War" "Film-Noir" "Horror" "Western" "Documentary") () ()
+        (TableRead Table{global:Struct{},key:[],row:Struct{f0:Int32,f1:String,f6:Int32,f7:Int32,f8:Int32,f9:Int32,f10:Int32,f11:Int32,f12:Int32,f13:Int32,f14:Int32,f15:Int32,f16:Int32,f17:Int32,f18:Int32,f19:Int32,f20:Int32,f21:Int32,f22:Int32,f23:Int32}} False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"|\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+    (InsertFields
+      (SelectFields (id title)
+        (Ref row))
+      ("id" "title" "genres")
+      (genres
+        (ArrayFlatMap __iruid_7
+          (MakeArray Array[Array[String]]
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Action
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Adventure
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Animation
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Children's`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Comedy
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Crime
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Documentary
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Drama
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Fantasy
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Film-Noir`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Horror
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Musical
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Mystery
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Romance
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField `Sci-Fi`
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Thriller
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField War
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>))
+            (If
+              (ApplyComparisonOp NEQ
+                (GetField Western
+                  (Ref row))
+                (I32 0))
+              (Literal Array[String] <literal value>)
+              (Literal Array[String] <literal value>)))
+          (Ref __iruid_7))))))
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_11 stored as values in memory (estimated size 237.4 KB, free 363.2 MB)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_11_piece0 stored as bytes in memory (estimated size 23.0 KB, free 363.2 MB)
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Added broadcast_11_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:40 SparkContext: INFO: Created broadcast 11 from textFile at RichSparkContext.scala:16
+2019-09-05 10:07:40 FileInputFormat: INFO: Total input paths to process : 1
+2019-09-05 10:07:40 SparkContext: INFO: Starting job: collect at ContextRDD.scala:222
+2019-09-05 10:07:40 DAGScheduler: INFO: Got job 4 (collect at ContextRDD.scala:222) with 4 output partitions
+2019-09-05 10:07:40 DAGScheduler: INFO: Final stage: ResultStage 4 (collect at ContextRDD.scala:222)
+2019-09-05 10:07:40 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:40 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:40 DAGScheduler: INFO: Submitting ResultStage 4 (MapPartitionsRDD[31] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Removed broadcast_10_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 3.3 KB, free: 366.1 MB)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_12 stored as values in memory (estimated size 22.0 KB, free 363.2 MB)
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 37
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 56
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 43
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Removed broadcast_9_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_12_piece0 stored as bytes in memory (estimated size 9.3 KB, free 363.2 MB)
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Added broadcast_12_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 9.3 KB, free: 366.1 MB)
+2019-09-05 10:07:40 SparkContext: INFO: Created broadcast 12 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 80
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 27
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 29
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 49
+2019-09-05 10:07:40 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 4 (MapPartitionsRDD[31] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:40 TaskSchedulerImpl: INFO: Adding task set 4.0 with 4 tasks
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Removed broadcast_5_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:40 TaskSetManager: INFO: Starting task 0.0 in stage 4.0 (TID 16, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:40 TaskSetManager: INFO: Starting task 1.0 in stage 4.0 (TID 17, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:40 TaskSetManager: INFO: Starting task 2.0 in stage 4.0 (TID 18, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:40 TaskSetManager: INFO: Starting task 3.0 in stage 4.0 (TID 19, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:40 Executor: INFO: Running task 0.0 in stage 4.0 (TID 16)
+2019-09-05 10:07:40 Executor: INFO: Running task 1.0 in stage 4.0 (TID 17)
+2019-09-05 10:07:40 Executor: INFO: Running task 2.0 in stage 4.0 (TID 18)
+2019-09-05 10:07:40 Executor: INFO: Running task 3.0 in stage 4.0 (TID 19)
+2019-09-05 10:07:40 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:0+59086
+2019-09-05 10:07:40 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:177258+59086
+2019-09-05 10:07:40 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:118172+59086
+2019-09-05 10:07:40 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:59086+59086
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Removed broadcast_8_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 10.3 KB, free: 366.1 MB)
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 78
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 46
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 41
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 33
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 73
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 47
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 72
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 82
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 76
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 66
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 88
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 48
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 42
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 26
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 75
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 61
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 31
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 85
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 34
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 36
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 70
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 45
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 59
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 94
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 95
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 92
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 81
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 100
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 90
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 84
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 71
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 79
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 39
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 96
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 98
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 51
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 86
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 67
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 89
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 77
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 35
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 52
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 58
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 87
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 32
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 91
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 65
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 40
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 55
+2019-09-05 10:07:40 Executor: INFO: Finished task 3.0 in stage 4.0 (TID 19). 1091 bytes result sent to driver
+2019-09-05 10:07:40 TaskSetManager: INFO: Finished task 3.0 in stage 4.0 (TID 19) in 47 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Removed broadcast_6_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 7.5 KB, free: 366.1 MB)
+2019-09-05 10:07:40 Executor: INFO: Finished task 1.0 in stage 4.0 (TID 17). 1091 bytes result sent to driver
+2019-09-05 10:07:40 TaskSetManager: INFO: Finished task 1.0 in stage 4.0 (TID 17) in 48 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 83
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 60
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 38
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 44
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 99
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 93
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 54
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 57
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 97
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 63
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 28
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 64
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 62
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 30
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 69
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 68
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 53
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 74
+2019-09-05 10:07:40 ContextCleaner: INFO: Cleaned accumulator 50
+2019-09-05 10:07:40 Executor: INFO: Finished task 2.0 in stage 4.0 (TID 18). 1091 bytes result sent to driver
+2019-09-05 10:07:40 Executor: INFO: Finished task 0.0 in stage 4.0 (TID 16). 1087 bytes result sent to driver
+2019-09-05 10:07:40 TaskSetManager: INFO: Finished task 2.0 in stage 4.0 (TID 18) in 52 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:40 TaskSetManager: INFO: Finished task 0.0 in stage 4.0 (TID 16) in 54 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:40 TaskSchedulerImpl: INFO: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:40 DAGScheduler: INFO: ResultStage 4 (collect at ContextRDD.scala:222) finished in 0.064 s
+2019-09-05 10:07:40 DAGScheduler: INFO: Job 4 finished: collect at ContextRDD.scala:222, took 0.067436 s
+2019-09-05 10:07:40 Hail: INFO: Coerced sorted dataset
+2019-09-05 10:07:40 root: INFO: couldn't lower TableMapRows: is.hail.expr.ir.agg.UnsupportedExtraction: no scans to extract in TableMapRows
+2019-09-05 10:07:40 root: INFO: initop (Begin)
+2019-09-05 10:07:40 root: INFO: optimize (Compile): before: IR size 1: 
+(Begin)
+2019-09-05 10:07:40 root: INFO: optimize (Compile): after: IR size 1:
+(Begin)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_13 stored as values in memory (estimated size 40.0 B, free 363.7 MB)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_13_piece0 stored as bytes in memory (estimated size 45.0 B, free 363.7 MB)
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Added broadcast_13_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.1 MB)
+2019-09-05 10:07:40 SparkContext: INFO: Created broadcast 13 from broadcast at SparkBackend.scala:26
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C4.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C4.apply instruction count: 15
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C4.apply instruction count: 16
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C4.setPartitionIndex instruction count: 14
+2019-09-05 10:07:40 root: INFO: seqop (Begin)
+2019-09-05 10:07:40 root: INFO: optimize (Compile): before: IR size 1: 
+(Begin)
+2019-09-05 10:07:40 root: INFO: optimize (Compile): after: IR size 1:
+(Begin)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_14 stored as values in memory (estimated size 40.0 B, free 363.7 MB)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_14_piece0 stored as bytes in memory (estimated size 45.0 B, free 363.7 MB)
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Added broadcast_14_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.1 MB)
+2019-09-05 10:07:40 SparkContext: INFO: Created broadcast 14 from broadcast at SparkBackend.scala:26
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C5.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C5.apply instruction count: 15
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C5.apply instruction count: 22
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C5.setPartitionIndex instruction count: 14
+2019-09-05 10:07:40 root: INFO: optimize (Compile): before: IR size 132: 
+(InsertFields
+  (SelectFields (id title)
+    (Ref row))
+  ("id" "title" "genres")
+  (genres
+    (ArrayFlatMap __iruid_7
+      (MakeArray Array[Array[String]]
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Action
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Adventure
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Animation
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField `Children's`
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Comedy
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Crime
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Documentary
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Drama
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Fantasy
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField `Film-Noir`
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Horror
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Musical
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Mystery
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Romance
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField `Sci-Fi`
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Thriller
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField War
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Western
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>)))
+      (Ref __iruid_7))))
+2019-09-05 10:07:40 root: INFO: optimize (Compile): after: IR size 132:
+(InsertFields
+  (SelectFields (id title)
+    (Ref row))
+  ("id" "title" "genres")
+  (genres
+    (ArrayFlatMap __iruid_11
+      (MakeArray Array[Array[String]]
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Action
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Adventure
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Animation
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField `Children's`
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Comedy
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Crime
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Documentary
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Drama
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Fantasy
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField `Film-Noir`
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Horror
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Musical
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Mystery
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Romance
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField `Sci-Fi`
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Thriller
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField War
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>))
+        (If
+          (ApplyComparisonOp NEQ
+            (GetField Western
+              (Ref row))
+            (I32 0))
+          (Literal Array[String] <literal value>)
+          (Literal Array[String] <literal value>)))
+      (Ref __iruid_11))))
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C7.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C7.apply instruction count: 16
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C7.apply instruction count: 13
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C7.method1 instruction count: 3670
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_15 stored as values in memory (estimated size 352.0 B, free 363.7 MB)
+2019-09-05 10:07:40 MemoryStore: INFO: Block broadcast_15_piece0 stored as bytes in memory (estimated size 276.0 B, free 363.7 MB)
+2019-09-05 10:07:40 BlockManagerInfo: INFO: Added broadcast_15_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 276.0 B, free: 366.1 MB)
+2019-09-05 10:07:40 SparkContext: INFO: Created broadcast 15 from broadcast at SparkBackend.scala:26
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.apply instruction count: 129
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.apply instruction count: 28
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.method_1 instruction count: 4017
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.method_2 instruction count: 45
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.setPartitionIndex instruction count: 14
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.method_4 instruction count: 72
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.method_5 instruction count: 3265
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C6.addLiterals instruction count: 155
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C8.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C8.apply instruction count: 11
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C8.apply instruction count: 13
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C9.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C9.apply instruction count: 16
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C9.apply instruction count: 13
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C9.method1 instruction count: 100
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C9.method2 instruction count: 83
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C10.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C10.apply instruction count: 16
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C10.apply instruction count: 13
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C10.method1 instruction count: 85
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C10.method2 instruction count: 113
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C11.<init> instruction count: 3
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C11.apply instruction count: 16
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C11.apply instruction count: 13
+2019-09-05 10:07:40 root: INFO: is/hail/codegen/generated/C11.method1 instruction count: 255
+2019-09-05 10:07:41 SparkContext: INFO: Starting job: collect at ContextRDD.scala:222
+2019-09-05 10:07:41 DAGScheduler: INFO: Got job 5 (collect at ContextRDD.scala:222) with 4 output partitions
+2019-09-05 10:07:41 DAGScheduler: INFO: Final stage: ResultStage 5 (collect at ContextRDD.scala:222)
+2019-09-05 10:07:41 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:41 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:41 DAGScheduler: INFO: Submitting ResultStage 5 (MapPartitionsRDD[34] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_16 stored as values in memory (estimated size 87.3 KB, free 363.7 MB)
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_16_piece0 stored as bytes in memory (estimated size 26.9 KB, free 363.6 MB)
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Added broadcast_16_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 26.9 KB, free: 366.1 MB)
+2019-09-05 10:07:41 SparkContext: INFO: Created broadcast 16 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:41 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 5 (MapPartitionsRDD[34] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:41 TaskSchedulerImpl: INFO: Adding task set 5.0 with 4 tasks
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 0.0 in stage 5.0 (TID 20, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 1.0 in stage 5.0 (TID 21, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 2.0 in stage 5.0 (TID 22, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 3.0 in stage 5.0 (TID 23, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 Executor: INFO: Running task 0.0 in stage 5.0 (TID 20)
+2019-09-05 10:07:41 Executor: INFO: Running task 1.0 in stage 5.0 (TID 21)
+2019-09-05 10:07:41 Executor: INFO: Running task 3.0 in stage 5.0 (TID 23)
+2019-09-05 10:07:41 Executor: INFO: Running task 2.0 in stage 5.0 (TID 22)
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:118172+59086
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:177258+59086
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:59086+59086
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/X4Ttxu06GO.txt:0+59086
+2019-09-05 10:07:41 Executor: INFO: Finished task 3.0 in stage 5.0 (TID 23). 896 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 3.0 in stage 5.0 (TID 23) in 166 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:41 Executor: INFO: Finished task 2.0 in stage 5.0 (TID 22). 896 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 2.0 in stage 5.0 (TID 22) in 170 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:41 Executor: INFO: Finished task 1.0 in stage 5.0 (TID 21). 896 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 1.0 in stage 5.0 (TID 21) in 171 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:41 Executor: INFO: Finished task 0.0 in stage 5.0 (TID 20). 896 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 0.0 in stage 5.0 (TID 20) in 171 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:41 TaskSchedulerImpl: INFO: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:41 DAGScheduler: INFO: ResultStage 5 (collect at ContextRDD.scala:222) finished in 0.180 s
+2019-09-05 10:07:41 DAGScheduler: INFO: Job 5 finished: collect at ContextRDD.scala:222, took 0.185656 s
+2019-09-05 10:07:41 Hail: INFO: wrote table with 1682 rows in 4 partitions to data/movies.ht
+2019-09-05 10:07:41 root: INFO: Time taken for CompileAndEvaluate -- first pass: 156.047ms
+2019-09-05 10:07:41 root: INFO: Time taken for CompileAndEvaluate -- after Matrix lowering: 78.865ms
+2019-09-05 10:07:41 root: INFO: Time taken for CompileAndEvaluate -- interpret: 910.101ms
+2019-09-05 10:07:41 Hail: INFO: importing ratings table and writing to data/ratings.ht ...
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_17 stored as values in memory (estimated size 237.4 KB, free 363.4 MB)
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_17_piece0 stored as bytes in memory (estimated size 23.0 KB, free 363.4 MB)
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Added broadcast_17_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:41 SparkContext: INFO: Created broadcast 17 from textFile at RichSparkContext.scala:16
+2019-09-05 10:07:41 FileInputFormat: INFO: Total input paths to process : 1
+2019-09-05 10:07:41 Hail: INFO: Reading table to impute column types
+2019-09-05 10:07:41 SparkContext: INFO: Starting job: reduce at TextTableReader.scala:193
+2019-09-05 10:07:41 DAGScheduler: INFO: Got job 6 (reduce at TextTableReader.scala:193) with 4 output partitions
+2019-09-05 10:07:41 DAGScheduler: INFO: Final stage: ResultStage 6 (reduce at TextTableReader.scala:193)
+2019-09-05 10:07:41 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:41 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:41 DAGScheduler: INFO: Submitting ResultStage 6 (MapPartitionsRDD[39] at mapPartitions at TextTableReader.scala:166), which has no missing parents
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_18 stored as values in memory (estimated size 6.0 KB, free 363.4 MB)
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_18_piece0 stored as bytes in memory (estimated size 3.2 KB, free 363.4 MB)
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Added broadcast_18_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 3.2 KB, free: 366.1 MB)
+2019-09-05 10:07:41 SparkContext: INFO: Created broadcast 18 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:41 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 6 (MapPartitionsRDD[39] at mapPartitions at TextTableReader.scala:166) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:41 TaskSchedulerImpl: INFO: Adding task set 6.0 with 4 tasks
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 0.0 in stage 6.0 (TID 24, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 1.0 in stage 6.0 (TID 25, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 2.0 in stage 6.0 (TID 26, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 3.0 in stage 6.0 (TID 27, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 Executor: INFO: Running task 1.0 in stage 6.0 (TID 25)
+2019-09-05 10:07:41 Executor: INFO: Running task 2.0 in stage 6.0 (TID 26)
+2019-09-05 10:07:41 Executor: INFO: Running task 3.0 in stage 6.0 (TID 27)
+2019-09-05 10:07:41 Executor: INFO: Running task 0.0 in stage 6.0 (TID 24)
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:989586+494793
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:0+494793
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:494793+494793
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:1484379+494794
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 128
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 110
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 108
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 106
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 143
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 146
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 133
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 139
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 121
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Removed broadcast_16_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 26.9 KB, free: 366.1 MB)
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 115
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 120
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 122
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 118
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 112
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 136
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 102
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 113
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 141
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 140
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 149
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 107
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 135
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 117
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 125
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 123
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 103
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 119
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 131
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 142
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 138
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 105
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 101
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 111
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 144
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 145
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 130
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 126
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 124
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 114
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 129
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Removed broadcast_12_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 9.3 KB, free: 366.1 MB)
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 134
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 147
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 127
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 109
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Removed broadcast_11_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 104
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 137
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 132
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 150
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 116
+2019-09-05 10:07:41 ContextCleaner: INFO: Cleaned accumulator 148
+2019-09-05 10:07:41 Executor: INFO: Finished task 1.0 in stage 6.0 (TID 25). 848 bytes result sent to driver
+2019-09-05 10:07:41 Executor: INFO: Finished task 2.0 in stage 6.0 (TID 26). 848 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 2.0 in stage 6.0 (TID 26) in 204 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:41 Executor: INFO: Finished task 3.0 in stage 6.0 (TID 27). 848 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 1.0 in stage 6.0 (TID 25) in 204 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 3.0 in stage 6.0 (TID 27) in 204 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:41 Executor: INFO: Finished task 0.0 in stage 6.0 (TID 24). 848 bytes result sent to driver
+2019-09-05 10:07:41 TaskSetManager: INFO: Finished task 0.0 in stage 6.0 (TID 24) in 212 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:41 TaskSchedulerImpl: INFO: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:41 DAGScheduler: INFO: ResultStage 6 (reduce at TextTableReader.scala:193) finished in 0.221 s
+2019-09-05 10:07:41 DAGScheduler: INFO: Job 6 finished: reduce at TextTableReader.scala:193, took 0.222863 s
+2019-09-05 10:07:41 Hail: INFO: Finished type imputation
+  Loading column 'f0' as type 'int32' (imputed)
+  Loading column 'f1' as type 'int32' (imputed)
+  Loading column 'f2' as type 'int32' (imputed)
+  Loading column 'f3' as type 'int32' (imputed)
+2019-09-05 10:07:41 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 7: 
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/ratings.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableMapRows
+    (TableRename ("f0" "f1" "f2" "f3") ("user_id" "movie_id" "rating" "timestamp") () ()
+      (TableRead None False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"\\t\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}"))
+    (SelectFields (user_id movie_id rating)
+      (SelectFields (user_id movie_id rating timestamp)
+        (Ref row)))))
+2019-09-05 10:07:41 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 3:
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/ratings.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableRename ("f0" "f1" "f2") ("user_id" "movie_id" "rating") () ()
+    (TableRead Table{global:Struct{},key:[],row:Struct{f0:Int32,f1:Int32,f2:Int32}} False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"\\t\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+2019-09-05 10:07:41 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 3: 
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/ratings.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableRename ("f0" "f1" "f2") ("user_id" "movie_id" "rating") () ()
+    (TableRead Table{global:Struct{},key:[],row:Struct{f0:Int32,f1:Int32,f2:Int32}} False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"\\t\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+2019-09-05 10:07:41 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 3:
+(TableWrite "{\"name\":\"TableNativeWriter\",\"path\":\"data/ratings.ht\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null}"
+  (TableRename ("f0" "f1" "f2") ("user_id" "movie_id" "rating") () ()
+    (TableRead Table{global:Struct{},key:[],row:Struct{f0:Int32,f1:Int32,f2:Int32}} False "{\"name\":\"TextTableReader\",\"options\":{\"files\":[\"file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt\"],\"typeMapStr\":{},\"comment\":[],\"separator\":\"\\t\",\"missing\":[\"NA\"],\"noHeader\":true,\"impute\":true,\"quoteStr\":null,\"skipBlankLines\":false,\"forceBGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"forceGZ\":false}}")))
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_19 stored as values in memory (estimated size 237.4 KB, free 363.5 MB)
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_19_piece0 stored as bytes in memory (estimated size 23.0 KB, free 363.5 MB)
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Added broadcast_19_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:07:41 SparkContext: INFO: Created broadcast 19 from textFile at RichSparkContext.scala:16
+2019-09-05 10:07:41 FileInputFormat: INFO: Total input paths to process : 1
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C12.<init> instruction count: 3
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C12.apply instruction count: 11
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C12.apply instruction count: 13
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C13.<init> instruction count: 3
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C13.apply instruction count: 16
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C13.apply instruction count: 13
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C13.method1 instruction count: 100
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C13.method2 instruction count: 64
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C14.<init> instruction count: 3
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C14.apply instruction count: 16
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C14.apply instruction count: 13
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C14.method1 instruction count: 85
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C14.method2 instruction count: 94
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C15.<init> instruction count: 3
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C15.apply instruction count: 68
+2019-09-05 10:07:41 root: INFO: is/hail/codegen/generated/C15.apply instruction count: 13
+2019-09-05 10:07:41 SparkContext: INFO: Starting job: collect at ContextRDD.scala:222
+2019-09-05 10:07:41 DAGScheduler: INFO: Got job 7 (collect at ContextRDD.scala:222) with 4 output partitions
+2019-09-05 10:07:41 DAGScheduler: INFO: Final stage: ResultStage 7 (collect at ContextRDD.scala:222)
+2019-09-05 10:07:41 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:07:41 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:07:41 DAGScheduler: INFO: Submitting ResultStage 7 (MapPartitionsRDD[48] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_20 stored as values in memory (estimated size 18.7 KB, free 363.5 MB)
+2019-09-05 10:07:41 MemoryStore: INFO: Block broadcast_20_piece0 stored as bytes in memory (estimated size 9.1 KB, free 363.5 MB)
+2019-09-05 10:07:41 BlockManagerInfo: INFO: Added broadcast_20_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 9.1 KB, free: 366.1 MB)
+2019-09-05 10:07:41 SparkContext: INFO: Created broadcast 20 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:07:41 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 7 (MapPartitionsRDD[48] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:07:41 TaskSchedulerImpl: INFO: Adding task set 7.0 with 4 tasks
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 0.0 in stage 7.0 (TID 28, localhost, executor driver, partition 0, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 1.0 in stage 7.0 (TID 29, localhost, executor driver, partition 1, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 2.0 in stage 7.0 (TID 30, localhost, executor driver, partition 2, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 TaskSetManager: INFO: Starting task 3.0 in stage 7.0 (TID 31, localhost, executor driver, partition 3, PROCESS_LOCAL, 7902 bytes)
+2019-09-05 10:07:41 Executor: INFO: Running task 1.0 in stage 7.0 (TID 29)
+2019-09-05 10:07:41 Executor: INFO: Running task 3.0 in stage 7.0 (TID 31)
+2019-09-05 10:07:41 Executor: INFO: Running task 0.0 in stage 7.0 (TID 28)
+2019-09-05 10:07:41 Executor: INFO: Running task 2.0 in stage 7.0 (TID 30)
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:989586+494793
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:0+494793
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:1484379+494794
+2019-09-05 10:07:41 HadoopRDD: INFO: Input split: file:/tmp/hail.y9sji7K7raCc/KoELYYYFPp.txt:494793+494793
+2019-09-05 10:07:42 Executor: INFO: Finished task 3.0 in stage 7.0 (TID 31). 897 bytes result sent to driver
+2019-09-05 10:07:42 TaskSetManager: INFO: Finished task 3.0 in stage 7.0 (TID 31) in 438 ms on localhost (executor driver) (1/4)
+2019-09-05 10:07:42 Executor: INFO: Finished task 2.0 in stage 7.0 (TID 30). 897 bytes result sent to driver
+2019-09-05 10:07:42 TaskSetManager: INFO: Finished task 2.0 in stage 7.0 (TID 30) in 444 ms on localhost (executor driver) (2/4)
+2019-09-05 10:07:42 Executor: INFO: Finished task 1.0 in stage 7.0 (TID 29). 897 bytes result sent to driver
+2019-09-05 10:07:42 TaskSetManager: INFO: Finished task 1.0 in stage 7.0 (TID 29) in 447 ms on localhost (executor driver) (3/4)
+2019-09-05 10:07:42 Executor: INFO: Finished task 0.0 in stage 7.0 (TID 28). 897 bytes result sent to driver
+2019-09-05 10:07:42 TaskSetManager: INFO: Finished task 0.0 in stage 7.0 (TID 28) in 450 ms on localhost (executor driver) (4/4)
+2019-09-05 10:07:42 TaskSchedulerImpl: INFO: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2019-09-05 10:07:42 DAGScheduler: INFO: ResultStage 7 (collect at ContextRDD.scala:222) finished in 0.456 s
+2019-09-05 10:07:42 DAGScheduler: INFO: Job 7 finished: collect at ContextRDD.scala:222, took 0.458782 s
+2019-09-05 10:07:42 Hail: INFO: wrote table with 100000 rows in 4 partitions to data/ratings.ht
+2019-09-05 10:07:42 root: INFO: Time taken for CompileAndEvaluate -- first pass: 5.886ms
+2019-09-05 10:07:42 root: INFO: Time taken for CompileAndEvaluate -- after Matrix lowering: 4.133ms
+2019-09-05 10:07:42 root: INFO: Time taken for CompileAndEvaluate -- interpret: 647.066ms
+2019-09-05 10:08:19 CodecPool: INFO: Got brand-new decompressor [.gz]
+2019-09-05 10:09:54 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 9: 
+(TableCount
+  (TableFilter
+    (TableRead None False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")
+    (Coalesce
+      (ApplyComparisonOp EQ
+        (GetField occupation
+          (Ref row))
+        (Str "programmer"))
+      (False))))
+2019-09-05 10:09:54 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 9:
+(TableCount
+  (TableFilter
+    (TableRead Table{global:Struct{},key:[id],row:Struct{id:Int32,occupation:String}} False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")
+    (Coalesce
+      (ApplyComparisonOp EQ
+        (GetField occupation
+          (Ref row))
+        (Str "programmer"))
+      (False))))
+2019-09-05 10:09:54 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 9: 
+(TableCount
+  (TableFilter
+    (TableRead Table{global:Struct{},key:[id],row:Struct{id:Int32,occupation:String}} False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")
+    (Coalesce
+      (ApplyComparisonOp EQ
+        (GetField occupation
+          (Ref row))
+        (Str "programmer"))
+      (False))))
+2019-09-05 10:09:54 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 9:
+(TableCount
+  (TableFilter
+    (TableRead Table{global:Struct{},key:[id],row:Struct{id:Int32,occupation:String}} False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")
+    (Coalesce
+      (ApplyComparisonOp EQ
+        (GetField occupation
+          (Ref row))
+        (Str "programmer"))
+      (False))))
+2019-09-05 10:09:54 CodecPool: INFO: Got brand-new decompressor [.gz]
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C16.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C16.apply instruction count: 17
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C16.apply instruction count: 12
+2019-09-05 10:09:54 CodecPool: INFO: Got brand-new decompressor [.gz]
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C17.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C17.apply instruction count: 42
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C17.apply instruction count: 12
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C17.method1 instruction count: 127
+2019-09-05 10:09:54 root: INFO: optimize (Compile): before: IR size 6: 
+(Coalesce
+  (ApplyComparisonOp EQ
+    (GetField occupation
+      (Ref row))
+    (Str "programmer"))
+  (False))
+2019-09-05 10:09:54 root: INFO: optimize (Compile): after: IR size 6:
+(Coalesce
+  (ApplyComparisonOp EQ
+    (GetField occupation
+      (Ref row))
+    (Str "programmer"))
+  (False))
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C19.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C19.apply instruction count: 51
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C19.apply instruction count: 13
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_21 stored as values in memory (estimated size 64.0 B, free 363.5 MB)
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_21_piece0 stored as bytes in memory (estimated size 68.0 B, free 363.5 MB)
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Added broadcast_21_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 68.0 B, free: 366.1 MB)
+2019-09-05 10:09:54 SparkContext: INFO: Created broadcast 21 from broadcast at SparkBackend.scala:26
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.apply instruction count: 83
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.apply instruction count: 22
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.method_1 instruction count: 105
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.setPartitionIndex instruction count: 14
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.method_3 instruction count: 87
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C18.addLiterals instruction count: 29
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C20.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C20.apply instruction count: 11
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C20.apply instruction count: 13
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C21.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C21.apply instruction count: 17
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C21.apply instruction count: 12
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_22 stored as values in memory (estimated size 1512.0 B, free 363.5 MB)
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 158
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 177
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 183
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 175
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 194
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_22_piece0 stored as bytes in memory (estimated size 796.0 B, free 363.5 MB)
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Added broadcast_22_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 796.0 B, free: 366.1 MB)
+2019-09-05 10:09:54 SparkContext: INFO: Created broadcast 22 from broadcast at SparkBackend.scala:26
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Removed broadcast_17_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 195
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 168
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Removed broadcast_18_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 3.2 KB, free: 366.1 MB)
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 178
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 153
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 198
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 192
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 164
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 186
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 159
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 172
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 162
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 173
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 163
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 185
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 155
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 151
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 181
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 188
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 152
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 187
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 176
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 160
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 191
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 182
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 196
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 197
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 170
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 174
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 171
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 193
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 180
+2019-09-05 10:09:54 SparkContext: INFO: Starting job: fold at RVD.scala:628
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Removed broadcast_19_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 23.0 KB, free: 366.1 MB)
+2019-09-05 10:09:54 DAGScheduler: INFO: Got job 8 (fold at RVD.scala:628) with 4 output partitions
+2019-09-05 10:09:54 DAGScheduler: INFO: Final stage: ResultStage 8 (fold at RVD.scala:628)
+2019-09-05 10:09:54 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:09:54 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:09:54 DAGScheduler: INFO: Submitting ResultStage 8 (MapPartitionsRDD[54] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_23 stored as values in memory (estimated size 11.0 KB, free 364.0 MB)
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_23_piece0 stored as bytes in memory (estimated size 6.5 KB, free 364.0 MB)
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Added broadcast_23_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 6.5 KB, free: 366.1 MB)
+2019-09-05 10:09:54 SparkContext: INFO: Created broadcast 23 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:09:54 DAGScheduler: INFO: Submitting 4 missing tasks from ResultStage 8 (MapPartitionsRDD[54] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+2019-09-05 10:09:54 TaskSchedulerImpl: INFO: Adding task set 8.0 with 4 tasks
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 189
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 184
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 200
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 190
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 165
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 157
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 199
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 161
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 166
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 156
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 169
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 179
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 167
+2019-09-05 10:09:54 ContextCleaner: INFO: Cleaned accumulator 154
+2019-09-05 10:09:54 TaskSetManager: INFO: Starting task 0.0 in stage 8.0 (TID 32, localhost, executor driver, partition 0, PROCESS_LOCAL, 7696 bytes)
+2019-09-05 10:09:54 TaskSetManager: INFO: Starting task 1.0 in stage 8.0 (TID 33, localhost, executor driver, partition 1, PROCESS_LOCAL, 7696 bytes)
+2019-09-05 10:09:54 TaskSetManager: INFO: Starting task 2.0 in stage 8.0 (TID 34, localhost, executor driver, partition 2, PROCESS_LOCAL, 7696 bytes)
+2019-09-05 10:09:54 TaskSetManager: INFO: Starting task 3.0 in stage 8.0 (TID 35, localhost, executor driver, partition 3, PROCESS_LOCAL, 7696 bytes)
+2019-09-05 10:09:54 Executor: INFO: Running task 0.0 in stage 8.0 (TID 32)
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Removed broadcast_20_piece0 on c02st34lgvc8.roswellpark.org:59518 in memory (size: 9.1 KB, free: 366.1 MB)
+2019-09-05 10:09:54 Executor: INFO: Running task 1.0 in stage 8.0 (TID 33)
+2019-09-05 10:09:54 Executor: INFO: Running task 2.0 in stage 8.0 (TID 34)
+2019-09-05 10:09:54 Executor: INFO: Running task 3.0 in stage 8.0 (TID 35)
+2019-09-05 10:09:54 Executor: INFO: Finished task 0.0 in stage 8.0 (TID 32). 752 bytes result sent to driver
+2019-09-05 10:09:54 Executor: INFO: Finished task 1.0 in stage 8.0 (TID 33). 752 bytes result sent to driver
+2019-09-05 10:09:54 TaskSetManager: INFO: Finished task 0.0 in stage 8.0 (TID 32) in 25 ms on localhost (executor driver) (1/4)
+2019-09-05 10:09:54 TaskSetManager: INFO: Finished task 1.0 in stage 8.0 (TID 33) in 23 ms on localhost (executor driver) (2/4)
+2019-09-05 10:09:54 Executor: INFO: Finished task 3.0 in stage 8.0 (TID 35). 752 bytes result sent to driver
+2019-09-05 10:09:54 Executor: INFO: Finished task 2.0 in stage 8.0 (TID 34). 752 bytes result sent to driver
+2019-09-05 10:09:54 TaskSetManager: INFO: Finished task 3.0 in stage 8.0 (TID 35) in 26 ms on localhost (executor driver) (3/4)
+2019-09-05 10:09:54 TaskSetManager: INFO: Finished task 2.0 in stage 8.0 (TID 34) in 27 ms on localhost (executor driver) (4/4)
+2019-09-05 10:09:54 TaskSchedulerImpl: INFO: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2019-09-05 10:09:54 DAGScheduler: INFO: ResultStage 8 (fold at RVD.scala:628) finished in 0.036 s
+2019-09-05 10:09:54 DAGScheduler: INFO: Job 8 finished: fold at RVD.scala:628, took 0.040194 s
+2019-09-05 10:09:54 root: INFO: optimize (Compile): before: IR size 2: 
+(MakeTuple (0)
+  (I64 66))
+2019-09-05 10:09:54 root: INFO: optimize (Compile): after: IR size 2:
+(MakeTuple (0)
+  (I64 66))
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_24 stored as values in memory (estimated size 40.0 B, free 364.0 MB)
+2019-09-05 10:09:54 MemoryStore: INFO: Block broadcast_24_piece0 stored as bytes in memory (estimated size 45.0 B, free 364.0 MB)
+2019-09-05 10:09:54 BlockManagerInfo: INFO: Added broadcast_24_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.1 MB)
+2019-09-05 10:09:54 SparkContext: INFO: Created broadcast 24 from broadcast at SparkBackend.scala:26
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C22.<init> instruction count: 3
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C22.apply instruction count: 53
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C22.apply instruction count: 28
+2019-09-05 10:09:54 root: INFO: is/hail/codegen/generated/C22.setPartitionIndex instruction count: 14
+2019-09-05 10:09:54 root: INFO: Time taken for CompileAndEvaluate -- first pass: 15.078ms
+2019-09-05 10:09:54 root: INFO: Time taken for CompileAndEvaluate -- after Matrix lowering: 2.687ms
+2019-09-05 10:09:54 root: INFO: Time taken for CompileAndEvaluate -- interpret non-compilable: 156.783ms
+2019-09-05 10:09:54 root: INFO: Time taken for CompileAndEvaluate -- compile: 14.627ms
+2019-09-05 10:09:54 root: INFO: Time taken for CompileAndEvaluate -- runtime: 1.163ms
+2019-09-05 10:10:10 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 144: 
+(GetField rows
+  (TableCollect
+    (TableHead 35
+      (TableMapRows
+        (TableMapRows
+          (TableOrderBy (Aid)
+            (TableRead None False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}"))
+          (Let __uid_5
+            (Ref row)
+            (InsertFields
+              (SelectFields ()
+                (SelectFields (id age sex occupation zipcode)
+                  (Ref row)))
+              None
+              (id
+                (GetField id
+                  (Ref __uid_5)))
+              (age
+                (GetField age
+                  (Ref __uid_5)))
+              (sex
+                (GetField sex
+                  (Ref __uid_5)))
+              (occupation
+                (GetField occupation
+                  (Ref __uid_5)))
+              (zipcode
+                (GetField zipcode
+                  (Ref __uid_5))))))
+        (InsertFields
+          (SelectFields ()
+            (SelectFields (id age sex occupation zipcode)
+              (Ref row)))
+          None
+          (id
+            (Let __uid_6
+              (If
+                (ApplyUnaryPrimOp Bang
+                  (IsNA
+                    (GetField id
+                      (Ref row))))
+                (Apply str
+                  (GetField id
+                    (Ref row)))
+                (Str "NA"))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __uid_6))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[:*]`
+                    (Ref __uid_6)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __uid_6))))
+          (age
+            (Let __uid_7
+              (If
+                (ApplyUnaryPrimOp Bang
+                  (IsNA
+                    (GetField age
+                      (Ref row))))
+                (Apply str
+                  (GetField age
+                    (Ref row)))
+                (Str "NA"))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __uid_7))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[:*]`
+                    (Ref __uid_7)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __uid_7))))
+          (sex
+            (Let __uid_8
+              (If
+                (ApplyUnaryPrimOp Bang
+                  (IsNA
+                    (GetField sex
+                      (Ref row))))
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField sex
+                        (Ref row))))
+                  (Str "\""))
+                (Str "NA"))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __uid_8))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[:*]`
+                    (Ref __uid_8)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __uid_8))))
+          (occupation
+            (Let __uid_9
+              (If
+                (ApplyUnaryPrimOp Bang
+                  (IsNA
+                    (GetField occupation
+                      (Ref row))))
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField occupation
+                        (Ref row))))
+                  (Str "\""))
+                (Str "NA"))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __uid_9))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[:*]`
+                    (Ref __uid_9)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __uid_9))))
+          (zipcode
+            (Let __uid_10
+              (If
+                (ApplyUnaryPrimOp Bang
+                  (IsNA
+                    (GetField zipcode
+                      (Ref row))))
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField zipcode
+                        (Ref row))))
+                  (Str "\""))
+                (Str "NA"))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __uid_10))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[:*]`
+                    (Ref __uid_10)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __uid_10)))))))))
+2019-09-05 10:10:10 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 140:
+(GetField rows
+  (TableCollect
+    (TableMapRows
+      (TableHead 35
+        (TableOrderBy (Aid)
+          (TableRead None False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")))
+      (Let __iruid_359
+        (InsertFields
+          (SelectFields ()
+            (Ref row))
+          None
+          (id
+            (GetField id
+              (Ref row)))
+          (age
+            (GetField age
+              (Ref row)))
+          (sex
+            (GetField sex
+              (Ref row)))
+          (occupation
+            (GetField occupation
+              (Ref row)))
+          (zipcode
+            (GetField zipcode
+              (Ref row))))
+        (InsertFields
+          (SelectFields ()
+            (Ref __iruid_359))
+          None
+          (id
+            (Let __iruid_360
+              (If
+                (IsNA
+                  (GetField id
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply str
+                  (GetField id
+                    (Ref __iruid_359))))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_360))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_360)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_360))))
+          (age
+            (Let __iruid_361
+              (If
+                (IsNA
+                  (GetField age
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply str
+                  (GetField age
+                    (Ref __iruid_359))))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_361))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_361)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_361))))
+          (sex
+            (Let __iruid_362
+              (If
+                (IsNA
+                  (GetField sex
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField sex
+                        (Ref __iruid_359))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_362))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_362)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_362))))
+          (occupation
+            (Let __iruid_363
+              (If
+                (IsNA
+                  (GetField occupation
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField occupation
+                        (Ref __iruid_359))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_363))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_363)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_363))))
+          (zipcode
+            (Let __iruid_364
+              (If
+                (IsNA
+                  (GetField zipcode
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField zipcode
+                        (Ref __iruid_359))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_364))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_364)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_364)))))))))
+2019-09-05 10:10:10 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 140: 
+(GetField rows
+  (TableCollect
+    (TableMapRows
+      (TableHead 35
+        (TableOrderBy (Aid)
+          (TableRead None False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")))
+      (Let __iruid_359
+        (InsertFields
+          (SelectFields ()
+            (Ref row))
+          None
+          (id
+            (GetField id
+              (Ref row)))
+          (age
+            (GetField age
+              (Ref row)))
+          (sex
+            (GetField sex
+              (Ref row)))
+          (occupation
+            (GetField occupation
+              (Ref row)))
+          (zipcode
+            (GetField zipcode
+              (Ref row))))
+        (InsertFields
+          (SelectFields ()
+            (Ref __iruid_359))
+          None
+          (id
+            (Let __iruid_360
+              (If
+                (IsNA
+                  (GetField id
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply str
+                  (GetField id
+                    (Ref __iruid_359))))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_360))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_360)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_360))))
+          (age
+            (Let __iruid_361
+              (If
+                (IsNA
+                  (GetField age
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply str
+                  (GetField age
+                    (Ref __iruid_359))))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_361))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_361)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_361))))
+          (sex
+            (Let __iruid_362
+              (If
+                (IsNA
+                  (GetField sex
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField sex
+                        (Ref __iruid_359))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_362))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_362)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_362))))
+          (occupation
+            (Let __iruid_363
+              (If
+                (IsNA
+                  (GetField occupation
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField occupation
+                        (Ref __iruid_359))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_363))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_363)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_363))))
+          (zipcode
+            (Let __iruid_364
+              (If
+                (IsNA
+                  (GetField zipcode
+                    (Ref __iruid_359)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField zipcode
+                        (Ref __iruid_359))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_364))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_364)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_364)))))))))
+2019-09-05 10:10:10 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 140:
+(GetField rows
+  (TableCollect
+    (TableMapRows
+      (TableHead 35
+        (TableOrderBy (Aid)
+          (TableRead None False "{\"name\":\"TableNativeReader\",\"path\":\"data/users.ht\",\"_spec\":null}")))
+      (Let __iruid_737
+        (InsertFields
+          (SelectFields ()
+            (Ref row))
+          None
+          (id
+            (GetField id
+              (Ref row)))
+          (age
+            (GetField age
+              (Ref row)))
+          (sex
+            (GetField sex
+              (Ref row)))
+          (occupation
+            (GetField occupation
+              (Ref row)))
+          (zipcode
+            (GetField zipcode
+              (Ref row))))
+        (InsertFields
+          (SelectFields ()
+            (Ref __iruid_737))
+          None
+          (id
+            (Let __iruid_738
+              (If
+                (IsNA
+                  (GetField id
+                    (Ref __iruid_737)))
+                (Str "NA")
+                (Apply str
+                  (GetField id
+                    (Ref __iruid_737))))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_738))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_738)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_738))))
+          (age
+            (Let __iruid_739
+              (If
+                (IsNA
+                  (GetField age
+                    (Ref __iruid_737)))
+                (Str "NA")
+                (Apply str
+                  (GetField age
+                    (Ref __iruid_737))))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_739))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_739)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_739))))
+          (sex
+            (Let __iruid_740
+              (If
+                (IsNA
+                  (GetField sex
+                    (Ref __iruid_737)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField sex
+                        (Ref __iruid_737))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_740))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_740)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_740))))
+          (occupation
+            (Let __iruid_741
+              (If
+                (IsNA
+                  (GetField occupation
+                    (Ref __iruid_737)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField occupation
+                        (Ref __iruid_737))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_741))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_741)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_741))))
+          (zipcode
+            (Let __iruid_742
+              (If
+                (IsNA
+                  (GetField zipcode
+                    (Ref __iruid_737)))
+                (Str "NA")
+                (Apply `+`
+                  (Apply `+`
+                    (Str "\"")
+                    (Apply escapeString
+                      (GetField zipcode
+                        (Ref __iruid_737))))
+                  (Str "\"")))
+              (If
+                (ApplyComparisonOp GT
+                  (Apply length
+                    (Ref __iruid_742))
+                  (I32 104))
+                (Apply `+`
+                  (ApplyIR `[*:*]`
+                    (Ref __iruid_742)
+                    (I32 0)
+                    (I32 101))
+                  (Str "..."))
+                (Ref __iruid_742)))))))))
+2019-09-05 10:10:10 CodecPool: INFO: Got brand-new decompressor [.gz]
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C23.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C23.apply instruction count: 17
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C23.apply instruction count: 12
+2019-09-05 10:10:10 CodecPool: INFO: Got brand-new decompressor [.gz]
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C24.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C24.apply instruction count: 42
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C24.apply instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C24.method1 instruction count: 218
+2019-09-05 10:10:10 SparkContext: INFO: Starting job: runJob at ContextRDD.scala:611
+2019-09-05 10:10:10 DAGScheduler: INFO: Got job 9 (runJob at ContextRDD.scala:611) with 1 output partitions
+2019-09-05 10:10:10 DAGScheduler: INFO: Final stage: ResultStage 9 (runJob at ContextRDD.scala:611)
+2019-09-05 10:10:10 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:10:10 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:10:10 DAGScheduler: INFO: Submitting ResultStage 9 (MapPartitionsRDD[57] at mapPartitions at ContextRDD.scala:430), which has no missing parents
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_25 stored as values in memory (estimated size 6.2 KB, free 364.0 MB)
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_25_piece0 stored as bytes in memory (estimated size 3.8 KB, free 364.0 MB)
+2019-09-05 10:10:10 BlockManagerInfo: INFO: Added broadcast_25_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 3.8 KB, free: 366.1 MB)
+2019-09-05 10:10:10 SparkContext: INFO: Created broadcast 25 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:10:10 DAGScheduler: INFO: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[57] at mapPartitions at ContextRDD.scala:430) (first 15 tasks are for partitions Vector(0))
+2019-09-05 10:10:10 TaskSchedulerImpl: INFO: Adding task set 9.0 with 1 tasks
+2019-09-05 10:10:10 TaskSetManager: INFO: Starting task 0.0 in stage 9.0 (TID 36, localhost, executor driver, partition 0, PROCESS_LOCAL, 7696 bytes)
+2019-09-05 10:10:10 Executor: INFO: Running task 0.0 in stage 9.0 (TID 36)
+2019-09-05 10:10:10 Executor: INFO: Finished task 0.0 in stage 9.0 (TID 36). 752 bytes result sent to driver
+2019-09-05 10:10:10 TaskSetManager: INFO: Finished task 0.0 in stage 9.0 (TID 36) in 7 ms on localhost (executor driver) (1/1)
+2019-09-05 10:10:10 TaskSchedulerImpl: INFO: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2019-09-05 10:10:10 DAGScheduler: INFO: ResultStage 9 (runJob at ContextRDD.scala:611) finished in 0.014 s
+2019-09-05 10:10:10 DAGScheduler: INFO: Job 9 finished: runJob at ContextRDD.scala:611, took 0.015882 s
+2019-09-05 10:10:10 root: INFO: couldn't lower TableMapRows: is.hail.expr.ir.agg.UnsupportedExtraction: no scans to extract in TableMapRows
+2019-09-05 10:10:10 root: INFO: initop (Begin)
+2019-09-05 10:10:10 root: INFO: seqop (Begin)
+2019-09-05 10:10:10 root: INFO: optimize (Compile): before: IR size 1: 
+(Begin)
+2019-09-05 10:10:10 root: INFO: optimize (Compile): after: IR size 1:
+(Begin)
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_26 stored as values in memory (estimated size 40.0 B, free 364.0 MB)
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_26_piece0 stored as bytes in memory (estimated size 45.0 B, free 364.0 MB)
+2019-09-05 10:10:10 BlockManagerInfo: INFO: Added broadcast_26_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.1 MB)
+2019-09-05 10:10:10 SparkContext: INFO: Created broadcast 26 from broadcast at SparkBackend.scala:26
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C25.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C25.apply instruction count: 15
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C25.apply instruction count: 22
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C25.setPartitionIndex instruction count: 14
+2019-09-05 10:10:10 root: INFO: optimize (Compile): before: IR size 134: 
+(Let __iruid_737
+  (InsertFields
+    (SelectFields ()
+      (Ref row))
+    None
+    (id
+      (GetField id
+        (Ref row)))
+    (age
+      (GetField age
+        (Ref row)))
+    (sex
+      (GetField sex
+        (Ref row)))
+    (occupation
+      (GetField occupation
+        (Ref row)))
+    (zipcode
+      (GetField zipcode
+        (Ref row))))
+  (InsertFields
+    (SelectFields ()
+      (Ref __iruid_737))
+    None
+    (id
+      (Let __iruid_738
+        (If
+          (IsNA
+            (GetField id
+              (Ref __iruid_737)))
+          (Str "NA")
+          (Apply str
+            (GetField id
+              (Ref __iruid_737))))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_738))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_738)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_738))))
+    (age
+      (Let __iruid_739
+        (If
+          (IsNA
+            (GetField age
+              (Ref __iruid_737)))
+          (Str "NA")
+          (Apply str
+            (GetField age
+              (Ref __iruid_737))))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_739))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_739)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_739))))
+    (sex
+      (Let __iruid_740
+        (If
+          (IsNA
+            (GetField sex
+              (Ref __iruid_737)))
+          (Str "NA")
+          (Apply `+`
+            (Apply `+`
+              (Str "\"")
+              (Apply escapeString
+                (GetField sex
+                  (Ref __iruid_737))))
+            (Str "\"")))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_740))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_740)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_740))))
+    (occupation
+      (Let __iruid_741
+        (If
+          (IsNA
+            (GetField occupation
+              (Ref __iruid_737)))
+          (Str "NA")
+          (Apply `+`
+            (Apply `+`
+              (Str "\"")
+              (Apply escapeString
+                (GetField occupation
+                  (Ref __iruid_737))))
+            (Str "\"")))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_741))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_741)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_741))))
+    (zipcode
+      (Let __iruid_742
+        (If
+          (IsNA
+            (GetField zipcode
+              (Ref __iruid_737)))
+          (Str "NA")
+          (Apply `+`
+            (Apply `+`
+              (Str "\"")
+              (Apply escapeString
+                (GetField zipcode
+                  (Ref __iruid_737))))
+            (Str "\"")))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_742))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_742)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_742))))))
+2019-09-05 10:10:10 root: INFO: optimize (Compile): after: IR size 134:
+(Let __iruid_1238
+  (InsertFields
+    (SelectFields ()
+      (Ref row))
+    None
+    (id
+      (GetField id
+        (Ref row)))
+    (age
+      (GetField age
+        (Ref row)))
+    (sex
+      (GetField sex
+        (Ref row)))
+    (occupation
+      (GetField occupation
+        (Ref row)))
+    (zipcode
+      (GetField zipcode
+        (Ref row))))
+  (InsertFields
+    (SelectFields ()
+      (Ref __iruid_1238))
+    None
+    (id
+      (Let __iruid_1239
+        (If
+          (IsNA
+            (GetField id
+              (Ref __iruid_1238)))
+          (Str "NA")
+          (Apply str
+            (GetField id
+              (Ref __iruid_1238))))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_1239))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_1239)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_1239))))
+    (age
+      (Let __iruid_1240
+        (If
+          (IsNA
+            (GetField age
+              (Ref __iruid_1238)))
+          (Str "NA")
+          (Apply str
+            (GetField age
+              (Ref __iruid_1238))))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_1240))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_1240)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_1240))))
+    (sex
+      (Let __iruid_1241
+        (If
+          (IsNA
+            (GetField sex
+              (Ref __iruid_1238)))
+          (Str "NA")
+          (Apply `+`
+            (Apply `+`
+              (Str "\"")
+              (Apply escapeString
+                (GetField sex
+                  (Ref __iruid_1238))))
+            (Str "\"")))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_1241))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_1241)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_1241))))
+    (occupation
+      (Let __iruid_1242
+        (If
+          (IsNA
+            (GetField occupation
+              (Ref __iruid_1238)))
+          (Str "NA")
+          (Apply `+`
+            (Apply `+`
+              (Str "\"")
+              (Apply escapeString
+                (GetField occupation
+                  (Ref __iruid_1238))))
+            (Str "\"")))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_1242))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_1242)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_1242))))
+    (zipcode
+      (Let __iruid_1243
+        (If
+          (IsNA
+            (GetField zipcode
+              (Ref __iruid_1238)))
+          (Str "NA")
+          (Apply `+`
+            (Apply `+`
+              (Str "\"")
+              (Apply escapeString
+                (GetField zipcode
+                  (Ref __iruid_1238))))
+            (Str "\"")))
+        (If
+          (ApplyComparisonOp GT
+            (Apply length
+              (Ref __iruid_1243))
+            (I32 104))
+          (Apply `+`
+            (ApplyIR `[*:*]`
+              (Ref __iruid_1243)
+              (I32 0)
+              (I32 101))
+            (Str "..."))
+          (Ref __iruid_1243))))))
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C27.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C27.apply instruction count: 131
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C27.apply instruction count: 13
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_27 stored as values in memory (estimated size 72.0 B, free 364.0 MB)
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_27_piece0 stored as bytes in memory (estimated size 72.0 B, free 364.0 MB)
+2019-09-05 10:10:10 BlockManagerInfo: INFO: Added broadcast_27_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 72.0 B, free: 366.1 MB)
+2019-09-05 10:10:10 SparkContext: INFO: Created broadcast 27 from broadcast at SparkBackend.scala:26
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.apply instruction count: 117
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.apply instruction count: 28
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_1 instruction count: 227
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_2 instruction count: 1235
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_3 instruction count: 28
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_4 instruction count: 37
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_5 instruction count: 8
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_6 instruction count: 15
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_7 instruction count: 581
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_8 instruction count: 8
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_9 instruction count: 45
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_10 instruction count: 37
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_11 instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_12 instruction count: 581
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_13 instruction count: 8
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_14 instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_15 instruction count: 11
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_16 instruction count: 581
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_17 instruction count: 8
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_18 instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_19 instruction count: 581
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_20 instruction count: 8
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_21 instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_22 instruction count: 581
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_23 instruction count: 8
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_24 instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.setPartitionIndex instruction count: 14
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.method_26 instruction count: 197
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C26.addLiterals instruction count: 43
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C28.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C28.apply instruction count: 42
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C28.apply instruction count: 12
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C28.method1 instruction count: 272
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C29.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C29.apply instruction count: 16
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C29.apply instruction count: 13
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C29.method1 instruction count: 203
+2019-09-05 10:10:10 SparkContext: INFO: Starting job: collect at RVD.scala:671
+2019-09-05 10:10:10 DAGScheduler: INFO: Got job 10 (collect at RVD.scala:671) with 1 output partitions
+2019-09-05 10:10:10 DAGScheduler: INFO: Final stage: ResultStage 10 (collect at RVD.scala:671)
+2019-09-05 10:10:10 DAGScheduler: INFO: Parents of final stage: List()
+2019-09-05 10:10:10 DAGScheduler: INFO: Missing parents: List()
+2019-09-05 10:10:10 DAGScheduler: INFO: Submitting ResultStage 10 (MapPartitionsRDD[63] at mapPartitions at ContextRDD.scala:216), which has no missing parents
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_28 stored as values in memory (estimated size 40.6 KB, free 364.0 MB)
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_28_piece0 stored as bytes in memory (estimated size 17.4 KB, free 363.9 MB)
+2019-09-05 10:10:10 BlockManagerInfo: INFO: Added broadcast_28_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 17.4 KB, free: 366.1 MB)
+2019-09-05 10:10:10 SparkContext: INFO: Created broadcast 28 from broadcast at DAGScheduler.scala:1161
+2019-09-05 10:10:10 DAGScheduler: INFO: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[63] at mapPartitions at ContextRDD.scala:216) (first 15 tasks are for partitions Vector(0))
+2019-09-05 10:10:10 TaskSchedulerImpl: INFO: Adding task set 10.0 with 1 tasks
+2019-09-05 10:10:10 TaskSetManager: INFO: Starting task 0.0 in stage 10.0 (TID 37, localhost, executor driver, partition 0, PROCESS_LOCAL, 7790 bytes)
+2019-09-05 10:10:10 Executor: INFO: Running task 0.0 in stage 10.0 (TID 37)
+2019-09-05 10:10:10 Executor: INFO: Finished task 0.0 in stage 10.0 (TID 37). 2224 bytes result sent to driver
+2019-09-05 10:10:10 TaskSetManager: INFO: Finished task 0.0 in stage 10.0 (TID 37) in 20 ms on localhost (executor driver) (1/1)
+2019-09-05 10:10:10 TaskSchedulerImpl: INFO: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2019-09-05 10:10:10 DAGScheduler: INFO: ResultStage 10 (collect at RVD.scala:671) finished in 0.028 s
+2019-09-05 10:10:10 DAGScheduler: INFO: Job 10 finished: collect at RVD.scala:671, took 0.030460 s
+2019-09-05 10:10:10 root: INFO: optimize (Compile): before: IR size 4: 
+(MakeTuple (0)
+  (GetField rows
+    (GetField __iruid_924
+      (Ref __iruid_923))))
+2019-09-05 10:10:10 root: INFO: optimize (Compile): after: IR size 4:
+(MakeTuple (0)
+  (GetField rows
+    (GetField __iruid_924
+      (Ref __iruid_923))))
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_29 stored as values in memory (estimated size 40.0 B, free 363.9 MB)
+2019-09-05 10:10:10 MemoryStore: INFO: Block broadcast_29_piece0 stored as bytes in memory (estimated size 45.0 B, free 363.9 MB)
+2019-09-05 10:10:10 BlockManagerInfo: INFO: Added broadcast_29_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.1 MB)
+2019-09-05 10:10:10 SparkContext: INFO: Created broadcast 29 from broadcast at SparkBackend.scala:26
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C30.<init> instruction count: 3
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C30.apply instruction count: 105
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C30.apply instruction count: 28
+2019-09-05 10:10:10 root: INFO: is/hail/codegen/generated/C30.setPartitionIndex instruction count: 14
+2019-09-05 10:10:10 root: INFO: Time taken for CompileAndEvaluate -- first pass: 82.918ms
+2019-09-05 10:10:10 root: INFO: Time taken for CompileAndEvaluate -- after Matrix lowering: 68.575ms
+2019-09-05 10:10:10 root: INFO: Time taken for CompileAndEvaluate -- interpret non-compilable: 268.319ms
+2019-09-05 10:10:10 root: INFO: Time taken for CompileAndEvaluate -- compile: 11.240ms
+2019-09-05 10:10:10 root: INFO: Time taken for CompileAndEvaluate -- runtime: 3.559ms
+2019-09-06 12:31:24 HeartbeatReceiver: WARN: Removing executor driver with no recent heartbeats: 93364248 ms exceeds timeout 120000 ms
+2019-09-06 12:31:24 TaskSchedulerImpl: ERROR: Lost executor driver on localhost: Executor heartbeat timed out after 93364248 ms
+2019-09-06 12:31:25 SparkContext: INFO: Invoking stop() from shutdown hook
+2019-09-06 12:31:25 DAGScheduler: INFO: Executor lost: driver (epoch 0)
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: INFO: Trying to remove executor driver from BlockManagerMaster.
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_0_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_4_piece0 !
+2019-09-06 12:31:25 SparkContext: WARN: Killing executors is not supported by current scheduler.
+2019-09-06 12:31:25 Executor: INFO: Told to re-register on heartbeat
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_7_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_28_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_1_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_24_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_15_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_3_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_29_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_14_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_27_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_22_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_25_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_26_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_2_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_23_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_21_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: WARN: No more replicas available for broadcast_13_piece0 !
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: INFO: Removing block manager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-06 12:31:25 BlockManager: INFO: BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None) re-registering with master
+2019-09-06 12:31:25 BlockManager: INFO: Got told to re-register updating block broadcast_4_piece0
+2019-09-06 12:31:25 BlockManager: INFO: BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None) re-registering with master
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 17
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 4
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 6
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 15
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 16
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 9
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 12
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 11
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 10
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 1
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 8
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 22
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 23
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 19
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 3
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 7
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 21
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 13
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 25
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 14
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 5
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 18
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 2
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 20
+2019-09-06 12:31:25 ContextCleaner: INFO: Cleaned accumulator 24
+2019-09-06 12:31:25 AbstractConnector: INFO: Stopped Spark@18913ff6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-09-06 12:31:25 BlockManagerMaster: INFO: Registering BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-06 12:31:25 BlockManagerMaster: INFO: Registering BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-06 12:31:25 BlockManagerMaster: INFO: Removed driver successfully in removeExecutor
+2019-09-06 12:31:25 DAGScheduler: INFO: Shuffle files lost for executor: driver (epoch 0)
+2019-09-06 12:31:25 BlockManagerMasterEndpoint: INFO: Registering block manager c02st34lgvc8.roswellpark.org:59518 with 366.3 MB RAM, BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-06 12:31:25 BlockManagerMaster: INFO: Registered BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-06 12:31:25 BlockManagerMaster: INFO: Registered BlockManager BlockManagerId(driver, c02st34lgvc8.roswellpark.org, 59518, None)
+2019-09-06 12:31:25 BlockManager: INFO: Reporting 34 blocks to the master.
+2019-09-06 12:31:25 BlockManager: INFO: Reporting 34 blocks to the master.
+2019-09-06 12:31:25 DAGScheduler: INFO: Host added was in lost list earlier: localhost
+2019-09-06 12:31:26 SparkUI: INFO: Stopped Spark web UI at http://c02st34lgvc8.roswellpark.org:4040
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_13_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.3 MB)
+2019-09-06 12:31:26 ContextCleaner: INFO: Cleaned accumulator 220
+2019-09-06 12:31:26 ContextCleaner: INFO: Cleaned accumulator 253
+2019-09-06 12:31:26 ContextCleaner: INFO: Cleaned accumulator 269
+2019-09-06 12:31:26 ContextCleaner: INFO: Cleaned accumulator 262
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_13_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 45.0 B, original size: 45.0 B, free: 366.3 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_21_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 68.0 B, free: 366.3 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_21_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 68.0 B, original size: 68.0 B, free: 366.3 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_1_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 108.4 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_1_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 108.4 KB, original size: 108.4 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_3_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_3_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 23.0 KB, original size: 23.0 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_28_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 17.4 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_0_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 2.9 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_29_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_28_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 17.4 KB, original size: 17.4 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_24_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_0_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 2.9 KB, original size: 2.9 KB, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_29_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 45.0 B, original size: 45.0 B, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_2_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 1000.0 B, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_24_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 45.0 B, original size: 45.0 B, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_14_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.2 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_7_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 23.0 KB, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_27_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 72.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_25_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 3.8 KB, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_26_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 45.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 MapOutputTrackerMasterEndpoint: INFO: MapOutputTrackerMasterEndpoint stopped!
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_2_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 1000.0 B, original size: 1000.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_15_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 276.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Added broadcast_23_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (size: 6.5 KB, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_14_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 45.0 B, original size: 45.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_7_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 23.0 KB, original size: 23.0 KB, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_27_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 72.0 B, original size: 72.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_25_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 3.8 KB, original size: 3.8 KB, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_26_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 45.0 B, original size: 45.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_15_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 276.0 B, original size: 276.0 B, free: 366.1 MB)
+2019-09-06 12:31:26 BlockManagerInfo: INFO: Updated broadcast_23_piece0 in memory on c02st34lgvc8.roswellpark.org:59518 (current size: 6.5 KB, original size: 6.5 KB, free: 366.1 MB)
+2019-09-06 12:31:26 MemoryStore: INFO: MemoryStore cleared
+2019-09-06 12:31:26 BlockManager: INFO: BlockManager stopped
+2019-09-06 12:31:26 BlockManagerMaster: INFO: BlockManagerMaster stopped
+2019-09-06 12:31:26 OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: INFO: OutputCommitCoordinator stopped!
+2019-09-06 12:31:26 SparkContext: INFO: Successfully stopped SparkContext
+2019-09-06 12:31:26 ShutdownHookManager: INFO: Shutdown hook called
+2019-09-06 12:31:26 ShutdownHookManager: INFO: Deleting directory /private/var/folders/6d/6dsfg6190rs6qm2fvbyml920smsq5s/T/spark-fd9da934-33fa-45e6-b888-1bc98b8efbfe
+2019-09-06 12:31:26 ShutdownHookManager: INFO: Deleting directory /private/var/folders/6d/6dsfg6190rs6qm2fvbyml920smsq5s/T/spark-013b3891-f687-4ead-a765-6d3ff511692a
+2019-09-06 12:31:26 ShutdownHookManager: INFO: Deleting directory /private/var/folders/6d/6dsfg6190rs6qm2fvbyml920smsq5s/T/spark-013b3891-f687-4ead-a765-6d3ff511692a/pyspark-68259997-9c3c-4b69-ab88-bf74a947477a
